@@ -1,0 +1,21 @@
+name: SIM
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'design/**.sch'
+      - 'design/**.mag'
+      - 'design/**.sym'
+      - 'sim/**'
+      - 'info.yaml'
+      - 'config.yaml'
+  workflow_dispatch:
+
+concurrency:
+  group: "sim"
+  cancel-in-progress: true
+
+jobs:
+  sim:
+    uses: analogicus/jnw-actions/.github/workflows/sim.yaml@main
