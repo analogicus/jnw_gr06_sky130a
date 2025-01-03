@@ -1,5 +1,8 @@
 *.run
 *.ext
+*.raw
+*.sha
+*.logm
 __pycache__
 output_*/
 *.tcl
