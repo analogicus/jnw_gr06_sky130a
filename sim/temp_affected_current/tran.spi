@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/OTA_lpe.spi
+.include ../../../work/lpe/temp_affected_current_lpe.spi
 #else
-.include ../../../work/xsch/OTA.spice
+.include ../../../work/xsch/temp_affected_current.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -17,9 +17,8 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
+
 .param AVDD = {vdda}
-
-
 
 *-----------------------------------------------------------------
 * FORCE
@@ -28,10 +27,6 @@ VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
 
 
-VIN+ IN+ VIN_OFFSET+    dc 0 sin (0 1m 1Meg 0 0 0) 
-VIN- IN- VIN_OFFSET-    dc 0 sin (0 1m 1Meg 0 0 180) 
-VOFf1 VIN_OFFSET+ VSS dc 0.64
-VOFF2 VIN_OFFSET- VSS dc 0.64
 
 *-----------------------------------------------------------------
 * DUT
@@ -41,9 +36,8 @@ VOFF2 VIN_OFFSET- VSS dc 0.64
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save i(IB) v(OUT)
 .save all
-
+.save i(net2)
 
 
 *----------------------------------------------------------------
@@ -55,10 +49,10 @@ set color0=white
 set color1=black
 unset askquit
 
+*optran 0 0 0 1n 1u 0
 
-
-tran 1n 10u 0.1p
-
+*dc temp -40 105 1
+tran 10p 1000n
 write
 quit
 
@@ -66,6 +60,3 @@ quit
 .endc
 
 .end
-
-
-

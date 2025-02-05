@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 N -90 -40 -90 40 {lab=GATE}
-N 100 -40 100 40 {lab=IN-}
+N 100 -40 100 40 {lab=OUT}
 N -50 70 60 70 {lab=GATE}
 N -90 100 -90 150 {lab=VSS}
 N -90 150 100 150 {lab=VSS}
@@ -27,7 +27,7 @@ N -90 -70 -60 -70 {lab=OTA_SPLIT}
 N -60 -140 -60 -70 {lab=OTA_SPLIT}
 N -220 -70 -130 -70 {lab=IN+}
 N 140 -70 220 -70 {lab=IN-}
-N 100 -0 360 0 {lab=IN-}
+N 100 -0 360 0 {lab=OUT}
 N -0 -200 -0 -140 {lab=OTA_SPLIT}
 N -490 -350 0 -350 {lab=VDD}
 N 0 -350 -0 -260 {lab=VDD}
@@ -71,4 +71,4 @@ ac=27k
 m=1}
 C {devices/lab_wire.sym} -370 50 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} -260 -230 0 0 {name=p9 sig_type=std_logic lab=IB_GATE}
-C {devices/ipin.sym} 360 0 0 1 {name=p8 lab=OUT}
+C {devices/opin.sym} 360 0 0 0 {name=p8 lab=OUT}
