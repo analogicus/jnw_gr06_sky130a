@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 N -90 -40 -90 40 {lab=GATE}
-N 100 -40 100 40 {lab=OUT}
+N 100 -40 100 40 {lab=IN-}
 N -50 70 60 70 {lab=GATE}
 N -90 100 -90 150 {lab=VSS}
 N -90 150 100 150 {lab=VSS}
@@ -27,13 +27,13 @@ N -90 -70 -60 -70 {lab=OTA_SPLIT}
 N -60 -140 -60 -70 {lab=OTA_SPLIT}
 N -220 -70 -130 -70 {lab=IN+}
 N 140 -70 220 -70 {lab=IN-}
-N 100 -0 360 0 {lab=OUT}
+N 100 -0 360 0 {lab=IN-}
 N -0 -200 -0 -140 {lab=OTA_SPLIT}
 N -490 -350 0 -350 {lab=VDD}
 N 0 -350 -0 -260 {lab=VDD}
-N -330 -230 -40 -230 {lab=#net1}
+N -330 -230 -40 -230 {lab=IB_GATE}
 N -370 -350 -370 -260 {lab=VDD}
-N -370 -200 -370 -150 {lab=#net1}
+N -370 -200 -370 -150 {lab=IB_GATE}
 N -420 -230 -370 -230 {lab=VDD}
 N -420 -290 -420 -230 {lab=VDD}
 N -420 -290 -370 -290 {lab=VDD}
@@ -43,9 +43,9 @@ N 0 -290 50 -290 {lab=VDD}
 N 0 150 0 220 {lab=VSS}
 N -190 220 0 220 {lab=VSS}
 N -210 220 -190 220 {lab=VSS}
-N -370 -150 -290 -150 {lab=#net1}
-N -290 -230 -290 -150 {lab=#net1}
-N -370 -150 -370 -80 {lab=#net1}
+N -370 -150 -290 -150 {lab=IB_GATE}
+N -290 -230 -290 -150 {lab=IB_GATE}
+N -370 -150 -370 -80 {lab=IB_GATE}
 N -450 220 -210 220 {lab=VSS}
 N -370 150 -370 220 {lab=VSS}
 N -370 -20 -370 90 {lab=IB}
@@ -61,7 +61,6 @@ C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=x1 }
 C {devices/ipin.sym} -450 220 0 0 {name=p5 lab=VSS}
 C {devices/lab_wire.sym} -40 -140 0 0 {name=p6 sig_type=std_logic lab=OTA_SPLIT}
 C {devices/lab_wire.sym} -90 0 0 0 {name=p7 sig_type=std_logic lab=GATE}
-C {devices/lab_wire.sym} 360 0 0 1 {name=p8 sig_type=std_logic lab=OUT}
 C {devices/res_ac.sym} -370 120 0 0 {name=R1
 value=27k
 ac=27k
@@ -72,3 +71,4 @@ ac=27k
 m=1}
 C {devices/lab_wire.sym} -370 50 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} -260 -230 0 0 {name=p9 sig_type=std_logic lab=IB_GATE}
+C {devices/ipin.sym} 360 0 0 1 {name=p8 lab=OUT}
