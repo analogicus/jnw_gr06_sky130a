@@ -21,12 +21,14 @@
 .param AVDD = {vdda}
 
 *-----------------------------------------------------------------
-* FORCE
+* FORCE IN+ IN- VDD IB VSS
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+VDD  VDD  VSS  dc 1.8
+VIN+ IN+ VSS    dc 0
+VIN- IN- VSS    dc 0
+IBIAS IB 0      dc 10u
 
-VB VBIAS 0 dc 0.3
 
 *-----------------------------------------------------------------
 * DUT
@@ -48,10 +50,10 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
+*optran 0 0 0 1n 1u 0
 
 
-*tran 1n 10n 1p
+tran 1n 1u 0.1p
 write
 quit
 
