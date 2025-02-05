@@ -37,16 +37,14 @@ N 820 -160 880 -160 {lab=VDD}
 N 880 -220 880 -160 {lab=VDD}
 N 820 -220 880 -220 {lab=VDD}
 N 720 -160 780 -160 {lab=GATE}
-N 820 350 820 370 {lab=#net2}
 N 820 -130 820 290 {lab=OUT}
-N 860 400 860 480 {lab=VSS}
 N 450 510 820 510 {lab=VSS}
-N 820 430 820 510 {lab=VSS}
-N 820 480 860 480 {lab=VSS}
 N 820 100 990 100 {lab=OUT}
 N 90 110 200 110 {lab=VDD}
 N -180 110 -120 110 {lab=VSS}
 N -10 -160 -10 -40 {lab=GATE}
+N 820 350 820 510 {lab=VSS}
+N -60 -260 -60 -220 {lab=VDD}
 C {devices/ipin.sym} -370 -260 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -160 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -250 -160 0 1 {name=x2 }
@@ -75,13 +73,6 @@ ac=10k
 m=1}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 780 -160 0 0 {name=x4 }
 C {devices/lab_wire.sym} 720 -160 0 0 {name=p8 sig_type=std_logic lab=GATE}
-C {sky130_fd_pr/pnp_05v5.sym} 840 400 0 1 {name=Q3
-model=pnp_05v5_W3p40L3p40
-m=1
-spiceprefix=X
-}
-C {devices/res_ac.sym} 820 320 0 0 {name=R1
-value=10k
-ac=10k
-m=1}
 C {devices/opin.sym} 990 100 0 0 {name=p9 lab=OUT}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 820 320 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=1000 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -60 -190 0 0 {name=C2 model=cap_mim_m3_2 W=1 L=1 MF=100 spiceprefix=X}
