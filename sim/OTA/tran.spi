@@ -17,18 +17,20 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-
 .param AVDD = {vdda}
 
+
+
 *-----------------------------------------------------------------
-* FORCE IN+ IN- VDD IB VSS
+* FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
-VIN+ IN+ VSS    dc 0
-VIN- IN- VSS    dc 0
 IBIAS IB 0      dc 10u
 
+VIN+ IN+ VIN_OFFSET    dc 0 sin (0 1m 1Meg 0 0 0) 
+VIN- IN- VIN_OFFSET    dc 0 sin (0 1m 1Meg 0 0 180) 
+VOFFSET VIN_OFFSET VSS dc 0.64
 
 *-----------------------------------------------------------------
 * DUT
@@ -53,7 +55,7 @@ unset askquit
 *optran 0 0 0 1n 1u 0
 
 
-tran 1n 1u 0.1p
+tran 1n 10u 0.1p
 write
 quit
 
