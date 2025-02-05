@@ -5,11 +5,10 @@ V {}
 S {}
 E {}
 N -290 -130 -290 200 {lab=LEFT_SIDE}
-N -30 240 -30 280 {lab=LEFT_SIDE}
+N -20 240 -20 280 {lab=LEFT_SIDE}
 N -290 200 -290 370 {lab=LEFT_SIDE}
 N -290 280 -30 280 {lab=LEFT_SIDE}
-N 20 240 20 280 {lab=RIGHT_SIDE}
-N 20 280 310 280 {lab=RIGHT_SIDE}
+N 30 240 30 280 {lab=RIGHT_SIDE}
 N -460 510 450 510 {lab=VSS}
 N -290 430 -290 510 {lab=VSS}
 N -250 -160 260 -160 {lab=GATE}
@@ -40,12 +39,12 @@ N 720 -160 780 -160 {lab=GATE}
 N 820 -130 820 290 {lab=OUT}
 N 450 510 820 510 {lab=VSS}
 N 820 100 990 100 {lab=OUT}
-N 90 110 200 110 {lab=VDD}
-N -180 110 -120 110 {lab=VSS}
+N 100 110 210 110 {lab=VDD}
+N -170 110 -110 110 {lab=VSS}
 N 820 350 820 510 {lab=VSS}
 N -640 -260 -370 -260 {lab=VDD}
 N -550 -260 -550 -190 {lab=VDD}
-N -10 -70 -10 -40 {lab=GATE}
+N 0 -70 0 -40 {lab=GATE}
 N -430 -70 -430 50 {lab=#net2}
 N -510 50 -430 50 {lab=#net2}
 N -510 -110 -210 -110 {lab=#net2}
@@ -65,16 +64,18 @@ N -550 100 -550 510 {lab=VSS}
 N -470 50 -470 90 {lab=#net2}
 N -550 160 -470 160 {lab=VSS}
 N -430 -110 -430 -70 {lab=#net2}
-N -10 -160 -10 -70 {lab=GATE}
-N -10 -260 -10 -230 {lab=VDD}
+N 0 -160 0 -70 {lab=GATE}
+N 0 -260 0 -230 {lab=VDD}
+N -30 280 -20 280 {lab=LEFT_SIDE}
+N 30 280 310 280 {lab=RIGHT_SIDE}
 C {devices/ipin.sym} -640 -260 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -160 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -250 -160 0 1 {name=x2 }
-C {JNW_GR06_SKY130A/OTA.sym} -10 160 1 1 {name=x3}
+C {JNW_GR06_SKY130A/OTA.sym} 0 160 1 1 {name=x3}
 C {devices/ipin.sym} -690 510 0 0 {name=p2 lab=VSS}
-C {devices/lab_wire.sym} -180 110 0 0 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 200 110 0 1 {name=p4 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 130 -160 0 1 {name=p5 sig_type=std_logic lab=GATE}
+C {devices/lab_wire.sym} -170 110 0 0 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 210 110 0 1 {name=p4 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 140 -160 0 1 {name=p5 sig_type=std_logic lab=GATE}
 C {devices/lab_wire.sym} 310 -10 0 1 {name=p6 sig_type=std_logic lab=RIGHT_SIDE
 }
 C {devices/lab_wire.sym} -290 0 0 1 {name=p7 sig_type=std_logic lab=LEFT_SIDE
@@ -100,4 +101,4 @@ C {sky130_fd_pr/cap_mim_m3_2.sym} 820 320 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -510 -110 0 1 {name=x5 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -510 50 0 1 {name=x6 }
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -470 150 0 0 {name=x7 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} -10 -170 0 0 {name=x8 }
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 0 -170 0 0 {name=x8 }
