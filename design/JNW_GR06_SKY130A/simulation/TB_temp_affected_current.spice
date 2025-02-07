@@ -1,5 +1,35 @@
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/TB_temp_affected_current.sch
+**.subckt TB_temp_affected_current
+x1 VDD OUT 0 temp_affected_current
+V2 VDD 0 1.8
+R1 OUT 0 1k m=1
+**** begin user architecture code
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
+.option savecurrents
+.option gmin=1e-15
+.option temp=100
+.control
+optran 0 0 0 10n 10u 0
+op
+save all
+write TB_temp_affected_current.raw
+exit
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  JNW_GR06_SKY130A/temp_affected_current.sym # of pins=3
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/temp_affected_current.sym
 ** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/temp_affected_current.sch
-**.subckt temp_affected_current VDD OUT VSS
+.subckt temp_affected_current VDD OUT VSS
 *.ipin VDD
 *.ipin VSS
 *.opin OUT
@@ -11,7 +41,8 @@ XQ2 VSS VSS VR sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
 R2 RIGHT_SIDE VR 10k ac=10k m=1
 x4 OUT GATE VDD VDD JNWATR_PCH_4C5F0
 x8 VDD GATE JNWTR_CAPX1
-**.ends
+.ends
+
 
 * expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
 ** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
