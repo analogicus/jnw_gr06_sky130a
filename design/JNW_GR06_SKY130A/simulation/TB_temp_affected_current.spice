@@ -10,9 +10,8 @@ R1 OUT 0 1k m=1
 .param mc_mm_switch=0
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
-.option savecurrents
 .option gmin=1e-15
-.option temp=100
+.option temp=50
 .control
 optran 0 0 0 10n 10u 0
 op
@@ -41,6 +40,7 @@ XQ2 VSS VSS VR sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
 R2 RIGHT_SIDE VR 10k ac=10k m=1
 x4 OUT GATE VDD VDD JNWATR_PCH_4C5F0
 x8 VDD GATE JNWTR_CAPX1
+R1 OUT VSS 1k m=1
 .ends
 
 
