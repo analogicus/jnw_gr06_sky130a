@@ -2,7 +2,7 @@
 **.subckt TB_OTA
 x1 VDD IN IN out 0 OTA
 V1 VDD 0 1.8
-V2 IN 0 0.4
+V2 IN 0 0.8
 XC1 out 0 sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 **** begin user architecture code
 
@@ -13,7 +13,7 @@ XC1 out 0 sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option savecurrents
-.option gmin=1e-15
+.option gmin=1e-15 temp=100
 .save all
 .control
 optran 0 0 0 10n 10u 0
@@ -40,12 +40,20 @@ exit
 x2<1> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
 x2<0> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
 x3 GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
-x4 OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
-x5 OUT GATE VSS VSS JNWATR_NCH_4C5F0
-x6 GATE GATE VSS VSS JNWATR_NCH_4C5F0
+x4 net1 IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5 net1 GATE net2 net2 JNWATR_NCH_4C5F0
+x6 GATE GATE net2 net2 JNWATR_NCH_4C5F0
 x1 IB_GATE IB_GATE VDD VDD JNWATR_PCH_4C5F0
-R1 IB VSS 27k ac=27k m=1
+R1 IB VSS 10MEG ac=10Meg m=1
 R2 IB_GATE IB 27k ac=27k m=1
+R3 net2 VSS 0 ac=0 m=1
+x1<4> OUT net1 VSS net3<4> JNWATR_NCH_4C5F0
+x1<3> OUT net1 VSS net3<3> JNWATR_NCH_4C5F0
+x1<2> OUT net1 VSS net3<2> JNWATR_NCH_4C5F0
+x1<1> OUT net1 VSS net3<1> JNWATR_NCH_4C5F0
+x1<0> OUT net1 VSS net3<0> JNWATR_NCH_4C5F0
+x7<1> OUT IB_GATE VDD net4<1> JNWATR_PCH_4C5F0
+x7<0> OUT IB_GATE VDD net4<0> JNWATR_PCH_4C5F0
 .ends
 
 

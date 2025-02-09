@@ -19,7 +19,7 @@ C {devices/lab_wire.sym} 150 140 0 0 {name=p1 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 110 0 0 {name=p2 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 -40 0 0 {name=p3 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} -20 -160 0 0 {name=p4 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -300 30 0 0 {name=V2 value=0.4 savecurrent=false}
+C {devices/vsource.sym} -300 30 0 0 {name=V2 value=0.8 savecurrent=false}
 C {devices/lab_wire.sym} -300 -40 0 0 {name=p5 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 -40 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 10 0 0 {name=p7 sig_type=std_logic lab=IN}
@@ -32,7 +32,7 @@ value="
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option savecurrents
-.option gmin=1e-15
+.option gmin=1e-15 temp=100
 .save all
 .control
 optran 0 0 0 10n 10u 0

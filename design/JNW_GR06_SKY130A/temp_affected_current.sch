@@ -75,13 +75,8 @@ C {devices/res_ac.sym} 310 320 0 0 {name=R2
 value=10k
 ac=10k
 m=1}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 780 -160 0 0 {name=x4 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 780 -160 0 0 {name=x4[9:0]}
 C {devices/lab_wire.sym} 720 -160 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 990 100 0 0 {name=p9 lab=OUT}
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 0 -170 0 0 {name=x8 }
 C {devices/lab_wire.sym} 310 360 0 1 {name=p10 sig_type=std_logic lab=VR}
-C {devices/res.sym} 820 130 0 0 {name=R1
-value=1k
-footprint=1206
-device=resistor
-m=1}
