@@ -1,0 +1,11 @@
+* Measure temp_affected_current
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+meas tran OUT find v(OUT) at=100n
+
+echo "MEAS_END"
+.endc

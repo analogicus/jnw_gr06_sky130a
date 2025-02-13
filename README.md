@@ -6,7 +6,9 @@
 [![SIM](../../actions/workflows/sim.yaml/badge.svg)](../../actions/workflows/sim.yaml)
 
 # Who
-wulff
+Gabin Sbaffi
+Erik K. Jensen
+Renate ...
 
 # Why
 

@@ -1,0 +1,44 @@
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/OTA.sch
+**.subckt OTA VDD IN+ IN- OUT VSS
+*.ipin IN+
+*.ipin IN-
+*.ipin VDD
+*.ipin VSS
+*.opin OUT
+x2<1> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2<0> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x3 GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x4 OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5 OUT GATE VSS VSS JNWATR_NCH_4C5F0
+x6 GATE GATE VSS VSS JNWATR_NCH_4C5F0
+x1 IB_GATE IB_GATE VDD VDD JNWATR_PCH_4C5F0
+R1 IB VSS 27k ac=27k m=1
+R2 IB_GATE IB 27k ac=27k m=1
+**.ends
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sch
+.subckt JNWATR_NCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

@@ -1,0 +1,123 @@
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/TB_temp_affected_current.sch
+**.subckt TB_temp_affected_current
+x1 VDD OUT 0 temp_affected_current
+R1 OUT 0 1k m=1
+V1 VDD 0 1.8
+**** begin user architecture code
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
+.option gmin=1e-15
+.option temp=120
+.option savecurrents
+.control
+optran 0 0 0 10n 10u 0
+op
+save i(R1)
+write TB_temp_affected_current.raw
+exit
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  JNW_GR06_SKY130A/temp_affected_current.sym # of pins=3
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/temp_affected_current.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/temp_affected_current.sch
+.subckt temp_affected_current VDD OUT VSS
+*.ipin VDD
+*.ipin VSS
+*.opin OUT
+x1 RIGHT_SIDE GATE VDD VDD JNWATR_PCH_4C5F0
+x2 LEFT_SIDE GATE VDD VDD JNWATR_PCH_4C5F0
+x3 VDD RIGHT_SIDE LEFT_SIDE GATE VSS OTA
+XQ1 VSS VSS LEFT_SIDE sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
+XQ2 VSS VSS VR sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
+R2 RIGHT_SIDE VR 10k ac=10k m=1
+x4<9> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<8> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<7> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<6> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<5> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<4> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<3> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<2> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<1> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x4<0> OUT GATE VDD VDD JNWATR_PCH_4C5F0
+x8 VDD GATE JNWTR_CAPX1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_GR06_SKY130A/OTA.sym # of pins=5
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/OTA.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/OTA.sch
+.subckt OTA VDD IN+ IN- OUT VSS
+*.ipin IN+
+*.ipin IN-
+*.ipin VDD
+*.ipin VSS
+*.opin OUT
+x2<3> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2<2> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2<1> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2<0> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x3<3> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x3<2> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x3<1> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x3<0> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x4<3> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x4<2> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x4<1> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x4<0> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5<1> OUT GATE net1 net1 JNWATR_NCH_4C5F0
+x5<0> OUT GATE net1 net1 JNWATR_NCH_4C5F0
+x6<1> GATE GATE net1 net1 JNWATR_NCH_4C5F0
+x6<0> GATE GATE net1 net1 JNWATR_NCH_4C5F0
+x1 IB_GATE IB_GATE VDD VDD JNWATR_PCH_4C5F0
+R1 IB VSS 10MEG ac=10Meg m=1
+R2 IB_GATE IB 27k ac=27k m=1
+R3 net1 VSS 0 ac=0 m=1
+.ends
+
+
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_CAPX1.sym # of pins=2
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_CAPX1.sch
+.subckt JNWTR_CAPX1 A B
+*.iopin A
+*.iopin B
+XC1 B A sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=1 m=1
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sch
+.subckt JNWATR_NCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
