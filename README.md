@@ -8,15 +8,13 @@
 # Who
 Gabin Sbaffi
 Erik K. Jensen
-Renate ...
+Renate Klemetsdal
 
 # Why
 
-<explain why you made this module>
 
 # How
 
-<explain short how you made this module>
 
 
 # What
