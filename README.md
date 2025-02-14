@@ -14,11 +14,13 @@ Renate Klemetsdal
 We are making a temperature sensor
 
 ## Simulation results
+
+![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
+![INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
+
 temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
 
 OTA: [sim/TB_OTA/README](sim/TB_OTA/README)
-
-COMING SOON
 
 
 # Why
