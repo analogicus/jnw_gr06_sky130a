@@ -24,12 +24,11 @@ value="
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option gmin=1e-15
-.option temp=120
-.option savecurrents
+.option temp=50
 .control
-optran 0 0 0 10n 10u 0
+optran 0 0 0 10n 20u 1
 op
-save i(R1)
+save all
 write TB_temp_affected_current.raw
 exit
 .endc
