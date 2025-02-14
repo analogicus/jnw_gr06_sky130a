@@ -13,27 +13,31 @@ Renate Klemetsdal
 # What
 
 ## Simulation results
-temp_affected_current: [sim/TBtemp_affected_current/README](sim/TBtemp_affected_current/README)
+temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
 OTA: [sim/TB_OTA/README](sim/TB_OTA/README)
 
 COMING SOON
 
 
 # Why
+As part of the course TTT4188 Advanced Integrated circuits we are making a temperature sensor
 
 
 # How
 
 ## Testbenches
 temp_affected_current TB: [sim/TB_temp_affected_current/tran.spi](sim/TB_temp_affected_current/tran.spi)
+
 OTA TB: [sim/TB_OTA/tran.spi](sim/TB_OTA/tran.spi)
 
 ## Measurements
 temp_affected_current: [sim/TB_temp_affected_current/tran.meas](sim/TB_temp_affected_current/tran.meas)
+
 OTA: [sim/TB_OTA/tran.meas](sim/TB_OTA/tran.meas)
 
 ## Post processing
 temp_affected_current: [sim/TB_temp_affected_current/tran.py](sim/TB_temp_affected_current/tran.py)
+
 OTA: [sim/TB_OTA/tran.py](sim/TB_OTA/tran.py)
 
 
