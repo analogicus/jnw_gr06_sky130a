@@ -11,16 +11,18 @@ Erik K. Jensen &
 Renate Klemetsdal
 
 # What
+We are making a temperature sensor
 
 ## Simulation results
 temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
+
 OTA: [sim/TB_OTA/README](sim/TB_OTA/README)
 
 COMING SOON
 
 
 # Why
-As part of the course TTT4188 Advanced Integrated circuits we are making a temperature sensor
+For the course TTT4188 Advanced Integrated circuits
 
 
 # How
