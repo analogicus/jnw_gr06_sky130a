@@ -74,8 +74,8 @@ OTA: [sim/TB_OTA/tran.py](sim/TB_OTA/tran.py)
 
 # Simulation results
 
-![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
-![INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
+![IOUT_VOUT](./sim/temp_affected_current/IOUT_VOUT.png)
+![DIFF_INPUT_OTA_INPUT](./sim/OTA/DIFF_INPUT_OTA_INPUT.png)
 
 temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
 
