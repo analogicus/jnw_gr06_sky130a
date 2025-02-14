@@ -6,14 +6,26 @@
 [![SIM](../../actions/workflows/sim.yaml/badge.svg)](../../actions/workflows/sim.yaml)
 
 # Who
-Gabin Sbaffi
-Erik K. Jensen
+Gabin Sbaffi, 
+Erik K. Jensen &
 Renate Klemetsdal
 
 # Why
 
 
 # How
+
+## Testbenches
+temp_sensing_current TB: [sim/TB_temp_affected_current/tran.spi]()
+OTA TB: [sim/TB_OTA/tran.spi]()
+
+## Measurements
+temp_sensing_current: [sim/TB_temp_affected_current/tran.meas]()
+OTA: [sim/TB_OTA/tran.meas]()
+
+## Post processing
+temp_sensing_current: [sim/TB_temp_affected_current/tran.py]
+OTA: [sim/TB_OTA/tran.py]
 
 
 
