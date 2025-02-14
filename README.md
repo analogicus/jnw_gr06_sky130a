@@ -13,14 +13,7 @@ Renate Klemetsdal
 # What
 We are making a temperature sensor
 
-## Simulation results
 
-![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
-![INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
-
-temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
-
-OTA: [sim/TB_OTA/README](sim/TB_OTA/README)
 
 
 # Why
@@ -77,3 +70,13 @@ OTA: [sim/TB_OTA/tran.py](sim/TB_OTA/tran.py)
 | Technology          |         | Skywater 130 nm |         |       |
 | AVDD                | 1.7    | 1.8           | 1.9    | V     |
 | Temperature         | -40     | 27            | 125     | C     |
+
+
+# Simulation results
+
+![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
+![INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
+
+temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
+
+OTA: [sim/TB_OTA/README](sim/TB_OTA/README)
