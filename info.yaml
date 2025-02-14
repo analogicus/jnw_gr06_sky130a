@@ -12,9 +12,10 @@ email: anon@anon.com
 url: analogicus.github.io
 doc:
   # Make docs
-  #libraries:
-  #   <library>:
+  JNW_GR06_SKY130A:
+    - temp_affected_current
+    
   #       - <cell>
   #       - <cell>
 sim:
-  # <simdir>: command
+  temp_affected_current: make typical
