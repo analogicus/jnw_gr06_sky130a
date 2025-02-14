@@ -13,10 +13,10 @@ url: analogicus.github.io
 doc:
   # Make docs
   JNW_GR06_SKY130A:
-    - temp_affected_current
-    - OTA
-    - TB_OTA
-    - TB_temp_affected_current
+    #- temp_affected_current
+    #- OTA
+    #- TB_OTA
+    #- TB_temp_affected_current
     - JNW_GR06
     
   #       - <cell>
