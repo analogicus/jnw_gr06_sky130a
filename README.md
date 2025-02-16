@@ -21,7 +21,7 @@ For the course TTT4188 Advanced Integrated circuits
 
 
 # How
-
+## Circuits
 ## Testbenches
 temp_affected_current TB: [sim/TB_temp_affected_current/tran.spi](sim/TB_temp_affected_current/tran.spi)
 
@@ -73,8 +73,10 @@ OTA: [sim/TB_OTA/tran.py](sim/TB_OTA/tran.py)
 
 
 # Simulation results
-
+## DC sweep of the temperature affected current circuit:
 ![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
+
+## Diff input and its coresponding output on the OTA
 ![DIFF_INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
 
 <temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)>
