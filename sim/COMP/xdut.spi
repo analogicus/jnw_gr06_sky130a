@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut COMP
-XDUT VDD ltch VSS OUT- OUT+ IN IP  COMP
+XDUT VDD OUT- ltch IP IN VSS  COMP
