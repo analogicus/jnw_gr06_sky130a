@@ -26,9 +26,12 @@
 VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
 
-VLTCH ltch vss dc 0
-VIN+ IP VSS dc 0.91
-VIN- IN VSS dc 0.9
+VLTCH ltch vss PULSE(0 1.8 10n 0 0 10n 20n)
+
+
+
+VIN+ IP VSS dc 0.900001
+VIN- IN VSS dc 0.90
 
 
 *-----------------------------------------------------------------
@@ -56,7 +59,7 @@ unset askquit
 *optran 0 0 0 1n 1u 0
 
 
-tran 1n 10n 1p
+tran 1n 40n 1p
 
 write
 quit
