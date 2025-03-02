@@ -25,10 +25,11 @@
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
+In VSS  IN dc 1u
 
  
-VRESET rst VSS PULSE (0 1.8 0n 1n 1n 200n 1u)
-VRESET2 notrst VSS PULSE (1.8 0 0n 1n 1n 200n 1u)
+VRESET rst VSS PULSE (0 1.8 500n 1n 1n 200n 1u)
+
 
 
 *-----------------------------------------------------------------
