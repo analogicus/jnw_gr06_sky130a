@@ -11,7 +11,7 @@ Erik K. Jensen &
 Renate Klemetsdal
 
 # What
-We are making a temperature sensor
+We are making a temperature sensor.
 
 ## Simulation results
 temp_affected_current: [sim/TBtemp_affected_current/README](sim/TB_temp_affected_current/README)
