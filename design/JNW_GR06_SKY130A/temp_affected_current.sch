@@ -52,6 +52,7 @@ N 820 90 820 100 {lab=OUT}
 N 820 -60 820 -0 {lab=OUT}
 N 820 60 820 90 {lab=OUT}
 N 820 -0 820 60 {lab=OUT}
+N 820 160 820 510 {lab=VSS}
 C {devices/ipin.sym} -640 -260 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -160 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -250 -160 0 1 {name=x2 }
@@ -75,8 +76,8 @@ m=8
 spiceprefix=X
 }
 C {devices/res_ac.sym} 310 320 0 0 {name=R2
-value=10k
-ac=10k
+value=1Meg
+ac=1meg
 m=1}
 C {devices/lab_wire.sym} 720 -160 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 990 100 0 0 {name=p9 lab=OUT}

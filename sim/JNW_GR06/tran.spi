@@ -25,10 +25,10 @@
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
-In VSS  IN dc 1u
+
 
  
-VRESET rst VSS PULSE (0 1.8 500n 1n 1n 200n 1u)
+VRESET rst VSS PULSE (0 1.8 500n 4n 4n 200n 25u)
 
 
 
@@ -52,9 +52,10 @@ set color0=white
 set color1=black
 unset askquit
 
-option temp = 80
+option temp = -40
+optran 0 0 0 1n 1u 0
 
-tran 1n 3u 1p
+tran 1n 10u 1p
 
 write
 quit
