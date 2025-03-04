@@ -43,12 +43,12 @@ C {sky130_fd_pr/cap_mim_m3_2.sym} 180 -90 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=
 C {JNW_GR06_SKY130A/temp_affected_current.sym} -100 -400 0 0 {name=x1}
 C {JNW_GR06_SKY130A/OTA.sym} 330 -380 0 0 {name=x3}
 C {devices/res_ac.sym} 120 -510 0 0 {name=R2
-value=6.6k
-ac=6.6k
-m=1}
-C {devices/res_ac.sym} 120 -290 0 0 {name=R1
 value=10k
 ac=10k
+m=1}
+C {devices/res_ac.sym} 120 -290 0 0 {name=R1
+value=20k
+ac=2k
 m=1}
 C {devices/lab_pin.sym} 670 -380 0 1 {name=p5 sig_type=std_logic lab=OUT}
 C {devices/res_ac.sym} 180 -230 0 0 {name=R3

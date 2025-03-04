@@ -2,7 +2,7 @@
 **.subckt TB_OTA
 x1 VDD IN IN out 0 OTA
 V1 VDD 0 1.8
-V2 IN 0 0.8
+V2 IN 0 1
 XC1 out 0 sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 **** begin user architecture code
 
@@ -13,9 +13,10 @@ XC1 out 0 sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option savecurrents
-.option gmin=1e-15 temp=100
+.option gmin=1e-15 temp=-40
 .save all
 .control
+
 optran 0 0 0 10n 10u 0
 op
 
@@ -37,10 +38,7 @@ exit
 *.ipin VDD
 *.ipin VSS
 *.opin OUT
-x2<3> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
-x2<2> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
-x2<1> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
-x2<0> OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2 OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
 x3<3> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
 x3<2> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
 x3<1> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0

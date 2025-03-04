@@ -50,7 +50,7 @@ N -370 -20 -370 90 {lab=IB}
 N 0 150 -0 160 {lab=#net1}
 N 100 -0 250 -0 {lab=OUT}
 C {devices/ipin.sym} -220 -70 0 0 {name=p1 lab=IN+}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=x2[3:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=x2}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=x3[3:0]}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=x4[3:0]}
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x5[1:0]}

@@ -2,7 +2,7 @@
 **.subckt TB_temp_affected_current
 x1 VDD OUT 0 temp_affected_current
 V1 VDD 0 1.8
-XC1 OUT 0 sky130_fd_pr__cap_mim_m3_2 W=1 L=1 MF=1 m=1
+R2 OUT 0 10k ac=10k m=1
 **** begin user architecture code
 
 
@@ -11,7 +11,7 @@ XC1 OUT 0 sky130_fd_pr__cap_mim_m3_2 W=1 L=1 MF=1 m=1
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option gmin=1e-15
-.option temp=50
+.option temp=-40
 .control
 optran 0 0 0 10n 20u 1
 op
@@ -37,9 +37,9 @@ x2 LEFT_SIDE GATE VDD VDD JNWATR_PCH_4C5F0
 x3 VDD RIGHT_SIDE LEFT_SIDE GATE VSS OTA
 XQ1 VSS VSS LEFT_SIDE sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1 mult=1
 XQ2 VSS VSS VR sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8 mult=8
-R2 RIGHT_SIDE VR 10k ac=10k m=1
+R2 RIGHT_SIDE VR 1Meg ac=1meg m=1
 x8 VDD GATE JNWTR_CAPX1
-x4 OUT GATE VDD OUT JNWATR_PCH_4C5F0
+x4 OUT GATE VDD VDD JNWATR_PCH_4C5F0
 .ends
 
 
