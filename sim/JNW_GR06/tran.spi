@@ -1,25 +1,28 @@
-    
-    *TB_SUN_TR_SKY130NM/TB_NCM
+*TB_SUN_TR_SKY130NM/TB_NCM
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/temp_affected_current_lpe.spi
+.include ../../../work/lpe/JNW_GR06_lpe.spi
 #else
-.include ../../../work/xsch/temp_affected_current.spice
+.include ../../../work/xsch/JNW_GR06.spice
 #endif
+
+
 
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3 
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
 
-.temp 27
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
+
 .param TRF = 10p
 .param AVDD = {vdda}
+.param PERIOD_CLK = 20n
+.param PW_CLK = PERIOD_CLK/2
 
 *-----------------------------------------------------------------
 * FORCE
@@ -27,23 +30,44 @@
 VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
 
+VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
+VRESET reset VSS PULSE (0 1.8 2u 1n 1n 100n 5u)
+
 
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
+.include ../svinst.spi
+
+
+
+* Translate names
+VB0 b.0 b<0> dc 0
+VB1 b.1 b<1> dc 0
+VB2 b.2 b<2> dc 0
+VB3 b.3 b<3> dc 0
+VB4 b.4 b<4> dc 0
+VB5 b.0 b<5> dc 0
+VB6 b.1 b<6> dc 0
+VB7 b.2 b<7> dc 0
+VB8 b.3 b<8> dc 0
+VB9 b.4 b<9> dc 0
+VB10 b.4 b<10> dc 0
+
+
+
+
+
+
+
 
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 
-
-*----------------------------------------------------------------
-* SAVES
-*----------------------------------------------------------------
-.save v(OUT) v(GATE)
-.option savecurrents
+.save v(xdut.OUT) v(xdut.CAP) v(xdut.net2) v(rst)
 .save all
 
 *----------------------------------------------------------------
@@ -56,13 +80,27 @@ set color1=black
 unset askquit
 
 
-optran 0 0 0 1n 10u 0
-dc temp -40 120 5
+option temp = 100
+optran 0 0 0 1n 1u 0
 
-*tran 1n 2u 1p
+*- Override the default digital output bridge.
+pre_set auto_bridge_d_out =
+     + ( ".model auto_dac dac_bridge(out_low = 0.0 out_high = 1.8)"
+     +   "auto_bridge%d [ %s ] [ %s ] auto_dac" )
+
+optran 0 0 0 1n 1u 0
 
 
-write
+set fend = .raw
+foreach vtemp -40 -20 0 20 40 60 80 100 120
+  option temp=$vtemp
+  tran 10n 5u
+  write {cicname}_$vtemp$fend
+end
+
+
+
+
 quit
 
 

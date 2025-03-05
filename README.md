@@ -11,7 +11,7 @@ Erik K. Jensen &
 Renate Klemetsdal
 
 # What
-We are making a temperature sensor
+We are making a temperature sensor.
 
 
 

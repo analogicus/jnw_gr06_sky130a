@@ -24,7 +24,7 @@ value="
 .param mc_pr_switch=0
 .include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
 .option gmin=1e-15
-.option temp=50
+.option temp=-40
 .control
 optran 0 0 0 10n 20u 1
 op
@@ -37,10 +37,9 @@ exit
 C {JNW_GR06_SKY130A/temp_affected_current.sym} 50 -50 0 0 {name=x1}
 C {devices/lab_wire.sym} -160 20 0 0 {name=p2 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} 240 -60 0 0 {name=p3 sig_type=std_logic lab=OUT}
-C {devices/res.sym} 240 -10 0 0 {name=R1
-value=1k
-footprint=1206
-device=resistor
-m=1}
 C {devices/vsource.sym} -260 -40 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/lab_wire.sym} -180 -120 0 0 {name=p1 sig_type=std_logic lab=VDD}
+C {devices/res_ac.sym} 240 -10 0 0 {name=R2
+value=10k
+ac=10k
+m=1}
