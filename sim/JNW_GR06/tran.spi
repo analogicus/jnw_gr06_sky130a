@@ -11,7 +11,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3 
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -28,8 +28,8 @@ VDD  VDD  VSS  dc 1.8
 
 
  
-VRESET rst VSS PULSE (0 1.8 500n 4n 4n 200n 25u)
-
+VRESET rst VSS PULSE (0 1.8 2u 10n 10n 100n 25u 1)
+VnRESET nrst VSS PULSE (1.8 0 2u 10n 10n 100n 25u 1)
 
 
 *-----------------------------------------------------------------
@@ -41,8 +41,8 @@ VRESET rst VSS PULSE (0 1.8 500n 4n 4n 200n 25u)
 * PROBE
 *----------------------------------------------------------------
 
-.save v(xdut.OUT) v(xdut.CAP) v(xdut.net2)
-
+.save v(xdut.OUT) v(xdut.CAP) v(xdut.net2) v(rst)
+*.save all
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -53,16 +53,15 @@ set color0=white
 set color1=black
 unset askquit
 
-
-optran 0 0 0 1n 1u 0
-
-
 set fend = .raw
 foreach vtemp -40 -20 0 20 40 60 80 100 120
   option temp=$vtemp
-  tran 10n 10u
+  tran 1n 4u
   write {cicname}_$vtemp$fend
 end
+
+
+
 quit
 
 

@@ -28,10 +28,10 @@ VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc 1.8
 
 
-VIN+ IN+ VIN_OFFSET+     dc 0 sin (0 10m 1Meg 0 0 0) 
-VIN- IN- VIN_OFFSET-     dc 0 sin (0 10m 1Meg 0 0 180) 
-VOFFP VIN_OFFSET+ VSS dc 0.81
-VOFFN VIN_OFFSET- VSS dc 0.81
+VIN+ IN+ VIN_OFFSET+     dc 0 sin (0 30m 1Meg 0 0 0) 
+VIN- IN- VIN_OFFSET-     dc 0 sin (0 0m 1Meg 0 0 180) 
+VOFFP VIN_OFFSET+ VSS dc 0.12
+VOFFN VIN_OFFSET- VSS dc 0.12
 
 
 *-----------------------------------------------------------------
