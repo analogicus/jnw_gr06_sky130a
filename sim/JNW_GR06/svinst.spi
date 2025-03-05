@@ -1,0 +1,50 @@
+*Automatic generated instance fron ../../tech/scripts/genxdut dig
+adut [clk
++ reset
++ ]
++ [b.10
++ b.9
++ b.8
++ b.7
++ b.6
++ b.5
++ b.4
++ b.3
++ b.2
++ b.1
++ b.0
++ ] null dut
+.model dut d_cosim simulation="../dig.so" delay=10p
+
+* Inputs
+Rsvi0 clk 0 1G
+Rsvi1 reset 0 1G
+
+* Outputs
+Rsvi2 b.10 0 1G
+Rsvi3 b.9 0 1G
+Rsvi4 b.8 0 1G
+Rsvi5 b.7 0 1G
+Rsvi6 b.6 0 1G
+Rsvi7 b.5 0 1G
+Rsvi8 b.4 0 1G
+Rsvi9 b.3 0 1G
+Rsvi10 b.2 0 1G
+Rsvi11 b.1 0 1G
+Rsvi12 b.0 0 1G
+
+E_STATE_b dec_b 0 value={( 0 
++ + 1024*v(b.10)/AVDD
++ + 512*v(b.9)/AVDD
++ + 256*v(b.8)/AVDD
++ + 128*v(b.7)/AVDD
++ + 64*v(b.6)/AVDD
++ + 32*v(b.5)/AVDD
++ + 16*v(b.4)/AVDD
++ + 8*v(b.3)/AVDD
++ + 4*v(b.2)/AVDD
++ + 2*v(b.1)/AVDD
++ + 1*v(b.0)/AVDD
++)/1000}
+.save v(dec_b)
+
