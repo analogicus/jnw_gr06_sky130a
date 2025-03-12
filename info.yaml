@@ -14,10 +14,12 @@ doc:
   # Make docs
   libraries:
     JNW_GR06_SKY130A:
+      - JNW_GR06
       - temp_affected_current
       - OTA
       - TB_OTA
       - TB_temp_affected_current
+      - COMP
     
   #       - <cell>
   #       - <cell>
