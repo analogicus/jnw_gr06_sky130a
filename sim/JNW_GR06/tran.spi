@@ -28,7 +28,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS  dc 1.8
+VDD  VDD  VSS  dc {AVDD}
 
 VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
 VRESET reset VSS PULSE (0 1.8 2u 1n 1n 100n 5u)
