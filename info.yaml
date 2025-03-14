@@ -5,7 +5,7 @@ author: Anonymous
 # Your github username
 github: analogicus
 # Something funny and descriptive
-tagline: The answer is 42
+tagline: :)
 # Your email, if you so wish
 email: anon@anon.com
 # Your github site, usually <github username>.github.io
@@ -18,9 +18,11 @@ doc:
       - OTA
       - TB_OTA
       - TB_temp_affected_current
+      - JNW_GR06
     
   #       - <cell>
   #       - <cell>
 sim:
   temp_affected_current: make typical
   OTA: make typical
+  JNW_GR06: make typical
