@@ -48,7 +48,7 @@ def nicetoo(calibration_order):
 
 
 picture_folder = "pictures"
-picture_name = "ALL_CORNERS"
+picture_name = "MC"
 
 plt.figure(figsize=(16,10))
 fname = sys.argv[1:]
