@@ -15,6 +15,7 @@ include ../../tech/make/sim.make
 
 test:
 	${MAKE} typical OPT="Debug"
+	
 wave: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 	cicsim wave output_tran/tran_SchGtKttTtVt.raw 

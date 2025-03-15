@@ -39,7 +39,7 @@ def nicetoo(calibration_order):
 
     plt.xlabel("Temps [C]")
     plt.ylabel("Digital value[CLK cyles]")
-    plt.legend(loc='lower left', bbox_to_anchor=(0, 0))
+    #plt.legend(loc='lower left', bbox_to_anchor=(0, 0))
     plt.grid()
     
     save_path = os.path.join(picture_folder, picture_name + "_" + str(calibration_order) + "_calibration.png")
