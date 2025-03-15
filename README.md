@@ -61,7 +61,9 @@ For the course TTT4188 Advanced Integrated circuits
 <br />
 <!--- ################################################################################################################# --->
 
-# How
+# How the circuit works
+
+FYLL INN HER!
 
 <br />
 <!--- ################################################################################################################# --->
@@ -173,13 +175,32 @@ This section does not go throug the Test benches' results. Since they are only u
 
 ## JNW_GR06
 
+### The results from a monte carlo method simulations With 0 to 2 point calibration
+
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_0_calibration.png)
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_1_calibration.png)
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_2_calibration.png)
 
-![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/ALL_CORNERS_2_calibration.png)
-![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/ALL_CORNERS_1_calibration.png)
+
+<br />
+
+
+### The results from a all corners and high, typical and low voltage simulated simulations With 0 to 2 point calibration
+
+<br />
+
+#### NO calibration
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/ALL_CORNERS_0_calibration.png)
+
+<br />
+
+#### 1 point calibration
+![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/ALL_CORNERS_1_calibration.png)
+
+<br />
+
+#### 2 point calibration
+![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/ALL_CORNERS_2_calibration.png)
 
 
 <br />
@@ -187,14 +208,19 @@ This section does not go throug the Test benches' results. Since they are only u
 
 ## temp_affected_current
 
+
+### The current out of the PTAT over a 1kohm resistor on typical voltage, and typical corners at 27 deg C
 ![IOUT_VOUT](sim/temp_affected_current/IOUT_VOUT.png)
 
-![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/MC_0_calibration.png)
-![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/MC_1_calibration.png)
-![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/MC_2_calibration.png)
+<br />
 
-![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/ALL_CORNERS_2_calibration.png)
-![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/ALL_CORNERS_1_calibration.png)
+## The PTAT current out of the circuit in 30 simulations using MC methode.
+
+![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/MC_0_calibration.png)
+
+
+## The PTAT current out of the circuit in all corners and voltages.
+
 ![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/ALL_CORNERS_0_calibration.png)
 
 
@@ -202,6 +228,8 @@ This section does not go throug the Test benches' results. Since they are only u
 <!--- ################################################################################################################# --->
 
 ## OTA
+
+### OTA input output graph. showing it works in perfect conditions. (have not simulated this one in all corners and such.)
 
 ![DIFF_INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
 
