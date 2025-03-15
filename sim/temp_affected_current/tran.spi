@@ -28,7 +28,7 @@ Rout OUT VSS 1k ac=10k m=1
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  {AVDD}  VSS  dc 1.8
+VDD  VDD  VSS  dc {AVDD}
 
 
 
@@ -47,7 +47,7 @@ VDD  {AVDD}  VSS  dc 1.8
 *----------------------------------------------------------------
 .save v(OUT) v(GATE)
 .option savecurrents
-.save all
+*.save all
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -60,7 +60,7 @@ unset askquit
 
 
 optran 0 0 0 1n 10u 0
-dc temp -50 120 1
+dc temp -40 120 10
 
 
 
