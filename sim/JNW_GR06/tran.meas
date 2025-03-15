@@ -8,7 +8,7 @@ set fend = .raw
 foreach vtemp -40 -20 0 20 40 60 80 100 120
   option temp=$vtemp
   load {cicname}_$vtemp$fend
-  meas tran Deg$vtemp FIND v(dec_b) WHEN v(xdut.out)=1 Rise=last
+  meas tran Deg_$vtemp FIND i(@rout[i]) WHEN temp=1 Rise=last
 end
 
 echo "MEAS_END"

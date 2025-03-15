@@ -23,13 +23,10 @@ def plot_yaml_file(fname, name, calibration_order):
         elif (calibration_order == 2):
             temps[int(temp)] = (float(obj[o]) -float(obj["deg_60"]))*1000 *100 / ((float(obj["deg_-40"])-float(obj["deg_60"]))*1000) #ganger 1000 for å få clk cylcles
         else:
-            temps[int(temp)] = (float(obj[o]))*1000 
+            temps[int(temp)] = (float(obj[o]))
 
     d1 = OrderedDict(sorted(temps.items()))
     plt.plot(list(d1.keys()),list(d1.values()),label = name,linestyle="--",marker="o",markersize=5)
-
-
-
 
 def nicetoo(calibration_order):
     folder = "output_tran"
@@ -42,7 +39,7 @@ def nicetoo(calibration_order):
 
     plt.xlabel("Temps [C]")
     plt.ylabel("Digital value[CLK cyles]")
-    plt.legend(loc='lower left', bbox_to_anchor=(0, ))
+    plt.legend(loc='lower left', bbox_to_anchor=(0, 0))
     plt.grid()
     
     save_path = os.path.join(picture_folder, picture_name + "_" + str(calibration_order) + "_calibration.png")
@@ -51,7 +48,7 @@ def nicetoo(calibration_order):
 
 
 picture_folder = "pictures"
-picture_name = "ALL_CORNERS"
+picture_name = "MC"
 
 plt.figure(figsize=(16,10))
 fname = sys.argv[1:]
