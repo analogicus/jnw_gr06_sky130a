@@ -71,6 +71,8 @@ FYLL INN HER!
 # Where to find different stuff
 
 ## Circuits
+### You can find the schematics for all the differenc circuit blocks here: https://analogicus.github.io/jnw_gr06_sky130a/schematic.html 
+
 ### JNW_GR06: [/design/JNW_GR06_SKY130A/OTA.sch](/design/JNW_GR06_SKY130A/OTA.sch)\
 top level schematic. Shows the whole circuit.
 
