@@ -76,7 +76,7 @@ m=8
 spiceprefix=X
 }
 C {devices/res_ac.sym} 310 320 0 0 {name=R2
-value=10Meg
+value=100k
 ac=500k
 m=1}
 C {devices/lab_wire.sym} 720 -160 0 0 {name=p8 sig_type=std_logic lab=GATE}

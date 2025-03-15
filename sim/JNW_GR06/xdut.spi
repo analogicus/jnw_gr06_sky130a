@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut JNW_GR06
-XDUT VDD VSS reset  JNW_GR06
+XDUT VDD OUT reset VSS  JNW_GR06
