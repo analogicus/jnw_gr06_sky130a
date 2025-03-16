@@ -38,7 +38,7 @@ tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist clean
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" "Tt,Tl,Th" "Vl,Vh,Vt"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" "Tt,Tl,Th" "Vt"
 	python plot.py
 
 mc: netlist clean
