@@ -31,7 +31,7 @@ VSS  VSS  0     dc 0
 VDD  VDD  VSS  dc {AVDD}
 
 VCLK clk 0 dc 0 pulse (0 {AVDD} 0 {TRF} {TRF} {PW_CLK} {PERIOD_CLK})
-VRESET reset VSS PULSE (0 1.8 2u 1n 1n 100n 5u)
+VRESET reset VSS PULSE (0 1.8 2u 1n 1n 100n 20u)
 
 
 
@@ -94,7 +94,7 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 foreach vtemp -40 -20 0 20 40 60 80 100 120
   option temp=$vtemp
-  tran 1n 7u
+  tran 1n 10u
   write {cicname}_$vtemp$fend
 end
 
