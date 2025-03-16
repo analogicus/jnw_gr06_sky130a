@@ -1,0 +1,1 @@
+Mappe for filer som skal brukes i README til å forklare ting
