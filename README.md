@@ -231,10 +231,22 @@ This section does not go throug the Test benches' results. Since they are only u
 
 ## OTA
 
-### OTA input output graph. showing it works in perfect conditions. (have not simulated this one in all corners and such.)
+### OTA input output graph. showing it works in perfect conditions. 
 
+Here is proboly why the circuit doesnt work that well all the time. The OTA sim is kinda weird. I decided to only do typical voltage here, since the circuit break down if we do low or high.
+
+#### INPUT to the OTA
 ![DIFF_INPUT_OTA_INPUT](sim/OTA/DIFF_INPUT_OTA_INPUT.png)
 
+
+#### Simulation of the corners
+![DIFF_INPUT_OTA_INPUT](sim/OTA/pictures/ALL_CORNERS_.png)
+
+
+#### MC method sims for the OTA 
+This result is really weird i have not yet figured out why this happens
+
+![DIFF_INPUT_OTA_INPUT](sim/OTA/pictures/MC_.png)
 
 
 <br />
