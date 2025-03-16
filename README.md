@@ -67,21 +67,30 @@ To describe the circuit i want to split it into two different parts.
 1) Circuit to generat the temperature dependent current
 2) turning the current into a rising voltage and using it to create a digital output.
 
+## Top level schematic
 
+In this schematic, the PTAT (1) is created inside the block called temp_affected_current. The converting to digital happens with the OTA and the capasitor in the middle bottom. 
 
+![navn](images/JNW_GR06.svg)
+Nodes to remember: 
+V(cap) is at node CAP
+V(OUT) is at the node OUT
 
-
+<br />
+<!--- ################################################################################################################# --->
 
 
 ## 1. Creating the current
 
- The current is made by using the temperature dependencies of diodes(imolemented with bipolar transistors) and the size dufferent between the single diode on the left side and the 8 on the right side. The voltage over the left side diode is $V_{DL} = V_T ln\frac{I_D}{I_{L}}$ while the voltage over the diode on the right side is: $V_{DR} = V_T ln\frac{I_D}{I_{SR}}$, where $I_D$ is the equal current in both branches. This eaual current comes from the OTA feedback, which makes the gate voltage for the two PMOS transistors, P1 and P2 FIX NAVN.. 
+ The current is made by using the temperature dependencies of diodes(imolemented with bipolar transistors) and the size dufferent between the single diode on the left side and the 8 on the right side. The voltage over the left side diode is $V_{DL} = V_T ln\frac{I_D}{I_{L}}$ while the voltage over the diode on the right side is: $V_{DR} = V_T ln\frac{I_D}{I_{SR}}$, where $I_D$ is the equal current in both branches. This eaual current comes from the OTA feedback, which makes the gate voltage for the two PMOS transistors, x2 and x1 . 
 
- The OTA being ideal also forces  the voltages on both its inputs, NODE1 and NODE2 to be the same, which means that the voltage drop on the left side, over diode $D_L$ is the same as the voltage drop over the resistor $R$ and the 8 diodes $D_R$. this means that $V_R + V_{DR} = V_{DL}$ which imples $V_R = V_{DL} -V_{DR} = V_T ln\frac{I_D}{I_L} - V_T ln\frac{I_D}{I_R} = V_T ln\frac{I_R}{I_L}$. Since the rightside Diode $D_R$ is 8 times larger than the leftside diode $D_L$ we know that $I_R \aprox 8 \cdot I_L$ which means that $V_R \aprox V_T ln(8)$. Knowing the voltagedrop over the resistor means we can find the current in the right branch: $I_R = \frac{V_R}{R} = \frac{kT}{q} ln(8)/R$, where T is temperatur, meaning we got a current that increases with temperature. 
+ The OTA being ideal also forces  the voltages on both its inputs, V(RIGHT_SIDE) and V(LEFT_SIDE) to be the same, which means that the voltage drop on the left side, over diode $Q1$ is the same as the voltage drop over the resistor $R$ and the 8 diodes $Q2$. this means that $V_R + V_{Q2} = V_{Q1}$ which imples $V_R = V_{Q1} -V_{Q1} = V_T ln\frac{I_D}{I_L} - V_T ln\frac{I_D}{I_R} = V_T ln\frac{I_R}{I_L}$. Since the rightside Diode $Q2$ is 8 times larger than the leftside diode $Q1$ we know that $I_R \approx 8 \cdot I_L$ which means that $V_R \approx V_T ln(8)$. Knowing the voltagedrop over the resistor means we can find the current in the right branch: $I_R = \frac{V_R}{R} = \frac{kT}{q} ln(8)/R$, where T is temperatur, meaning we got a current that increases with temperature. 
+
+![navn](images/temp_affected_current.svg)
 
 
-
-
+<br />
+<!--- ################################################################################################################# --->
 
 ## 2. making the current into a digital value.
 
@@ -115,20 +124,13 @@ To measure this, we implement a counter—designed in Verilog for this project�
 
 
 
+In the picture below one can see how it is in the simulator. This is a very bad picture since the voltage over the capacitor V(cap) is not increasing regularoly and is negativly affected by probobly charge injection, but it show that the capacitor voltage (ornag) rises to about 0.6 before the output voltage (green) starts to rise. One can see the digital value (red) increasing continiusly aswell, we get the digital value by sampling the counter when V(out) becomes high. One can also see that the reset signal (blue) resets the counter and resets and messes with the capacitor voltage.
+
+![navn3](images/Screenshot2025-03-16 234507.png)
 
 
-
-
-
-## pictures :))
-
-bilde jeg kanskje vil ha?
--v(cap) øker og v(out) og v(reset) viser hvordan du tar tid med v(dec_b).
-
--output tegning
-
--blokk diagram
-
+<br />
+<!--- ################################################################################################################# --->
 
 
 
