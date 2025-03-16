@@ -23,7 +23,7 @@ def plot_yaml_file(fname, name, calibration_order):
         elif (calibration_order == 2):
             temps[int(temp)] = (float(obj[o]) -float(obj["deg_60"]))*1000 *100 / ((float(obj["deg_-40"])-float(obj["deg_60"]))*1000) #ganger 1000 for å få clk cylcles
         else:
-            temps[int(temp)] = (float(obj[o]))
+            temps[int(temp)] = (float(obj[o])) * 1000
 
     d1 = OrderedDict(sorted(temps.items()))
     plt.plot(list(d1.keys()),list(d1.values()),label = name,linestyle="--",marker="o",markersize=5)
