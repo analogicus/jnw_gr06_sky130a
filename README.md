@@ -139,7 +139,15 @@ In the picture below one can see how it is in the simulator. This is a very bad 
 
 # comments on the current state of the circuit
 
+Some informal comments on the circuit. I did not simulate on the corners and MC before thursdays, so i did not know that it would be so bad. There is a good bit to fix, since the circuit kinda works, but it does so poorly. This is most likely because of the OPPAMP not wroking to well(as you can see in the simulation results on the bottom of the page). It has problems when i change voltages. This is a result of me not really designing it well, i thought it would just work, "since how hard could a simple oppamp be" :(((. 
+I am quite certain that the current mirror transistor does not have a high enough VSD and that is why its not working. I have tried to make it a two stage to increase the output swing, and managed to get positive feedback. I have also tried to do som more thought out design, like reducing the needed VDS  for the transistors, increasing gm/Id for the inputs and decreasing for the diode copled ones. I managed to fix the current problem, but created a new problem with ff corners and Vh voltage. 
 
+Another problem i got is charge injection on the voltage over the capacitor, which you can see over in the schreenshot. I will see if i can fix it/reduce it by simply adding a transistor to absorb the voltage. I have dones this before, and it did work, but it created some other problem, so i dropped it, but it think its worth implementing here, i just didnt have time right now.
+
+
+Some note on the simulations and plots: I have change a good bit in the Makefiles, but it still runs sims. I have also created two plotting scripts. plot.py and mc_plot.py to plot the results. It plots the measured results, since i have not yet learned how to read the raw file. This means that a take a lot of measurments to make it possible to plot. The plotting scripts plots without and with 1 and 2 point calibration and puts the pictures in the picture folder inside the circuit blocks sim folder. But you can see all the results in this readme.
+
+When it comes to the SIM -passed mark. I have only included the typical simulations. this is because the etc(which runs all corners and sometimes all voltages and temps) takes forver, the same with MC.
 
 
 
