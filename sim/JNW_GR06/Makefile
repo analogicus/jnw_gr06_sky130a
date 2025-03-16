@@ -1,6 +1,6 @@
 
 
-all: etc mc summary
+all: etc mc 
 
 
 
@@ -12,6 +12,7 @@ LIB =JNW_GR06_SKY130A
 OPT=
 
 include ../../tech/make/sim.make
+
 
 test:
 	${MAKE} typical OPT="Debug"
@@ -34,12 +35,14 @@ tfs: netlist
 
 etc: netlist clean
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt"
+	python plot.py
 
 all_corners: netlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt"
 
 mc: netlist clean
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" Tt "Vt"
+	python mc_plot.py
 
 ntc: netlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
