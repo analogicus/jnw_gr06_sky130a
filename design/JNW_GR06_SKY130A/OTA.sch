@@ -53,8 +53,8 @@ C {devices/ipin.sym} -220 -70 0 0 {name=p1 lab=IN+}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=x2}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=x3[3:0]}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=x4[3:0]}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x5[1:0]}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=x6[1:0]}
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x5}
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=x6}
 C {devices/ipin.sym} 220 -70 0 1 {name=p2 lab=IN-}
 C {devices/ipin.sym} -490 -350 0 0 {name=p3 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=x1 }
@@ -62,7 +62,7 @@ C {devices/ipin.sym} -450 220 0 0 {name=p5 lab=VSS}
 C {devices/lab_wire.sym} -40 -140 0 0 {name=p6 sig_type=std_logic lab=OTA_SPLIT}
 C {devices/lab_wire.sym} -90 0 0 0 {name=p7 sig_type=std_logic lab=GATE}
 C {devices/res_ac.sym} -370 120 0 0 {name=R1
-value=10MEG
+value=1000k
 ac=10Meg
 m=1}
 C {devices/res_ac.sym} -370 -50 0 0 {name=R2

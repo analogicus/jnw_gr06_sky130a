@@ -16,6 +16,11 @@ include ../../tech/make/sim.make
 test:
 	${MAKE} typical OPT="Debug"
 
+idk: netlist clean
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss, Ktt, Kff" "Tl" "Vl"
+	python plot.py
+
+
 wave: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 	cicsim wave output_tran/tran_SchGtKttTtVt.raw
@@ -32,11 +37,13 @@ fast: netlist
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
-etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
+etc: netlist clean
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" "Tt,Tl,Th" "Vl,Vh,Vt"
+	python plot.py
 
-mc: netlist
+mc: netlist clean
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+	python mc_plot.py
 
 ntc: netlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
