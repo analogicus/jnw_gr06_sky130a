@@ -67,26 +67,75 @@ To describe the circuit i want to split it into two different parts.
 1) Circuit to generat the temperature dependent current
 2) turning the current into a rising voltage and using it to create a digital output.
 
-1. Creating the current
-
-
-2. making the current into a digital value.
-The current from (1) is taken and put into a capacitor to then create a risign voltage. We as ume that at this point the current is stabil, and the voltage of the capacitor is: $V_c = \frac{1}{c}\int_0^t I$. This gives us a voltage that increases linearly with time, menaing that if the current is half, it takes twice as long to reach the same voltage. We got a current that changes lineary ish with temperatur, meaning that at different temperatures the voltage over the capacitor reaches a voltage $V_{cap}$ with more or less time. A fomula for how long it takes to increase the voltage to 0.6, which is used in this circuit.
-
-  $ 0.6 = \frac{1}{c}\int_0^t I$ -> $0.6C = I * t$ -> $t = 0.6 \frac{C}{I}$
-
-  To make this increasing voltage into a digital value, it is sendt into a comparator with the value we want to compare it too, meaning that we want to see when it is larger than a certain voltage, which in this circuit is 0.6V. When the voltage over the capacitor $V_{cap}$ is lower than 0.6V, we get an output of 0, and when it is larager we get an output of 1. We create this output with a comperator, where an OTA was used in this design. 
-
-  The output would 
 
 
 
+
+
+
+## 1. Creating the current
+
+ The current is made by using the temperature dependencies of diodes(imolemented with bipolar transistors) and the size dufferent between the single diode on the left side and the 8 on the right side. The voltage over the left side diode is $V_{DL} = V_T ln\frac{I_D}{I_{L}}$ while the voltage over the diode on the right side is: $V_{DR} = V_T ln\frac{I_D}{I_{SR}}$, where $I_D$ is the equal current in both branches. This eaual current comes from the OTA feedback, which makes the gate voltage for the two PMOS transistors, P1 and P2 FIX NAVN.. 
+
+ The OTA being ideal also forces  the voltages on both its inputs, NODE1 and NODE2 to be the same, which means that the voltage drop on the left side, over diode $D_L$ is the same as the voltage drop over the resistor $R$ and the 8 diodes $D_R$. this means that $V_R + V_{DR} = V_{DL}$ which imples $V_R = V_{DL} -V_{DR} = V_T ln\frac{I_D}{I_L} - V_T ln\frac{I_D}{I_R} = V_T ln\frac{I_R}{I_L}$. Since the rightside Diode $D_R$ is 8 times larger than the leftside diode $D_L$ we know that $I_R \aprox 8 \cdot I_L$ which means that $V_R \aprox V_T ln(8)$. Knowing the voltagedrop over the resistor means we can find the current in the right branch: $I_R = \frac{V_R}{R} = \frac{kT}{q} ln(8)/R$, where T is temperatur, meaning we got a current that increases with temperature. 
+
+
+
+
+
+## 2. making the current into a digital value.
+
+The current from equation (1) is directed into a capacitor, resulting in a rising voltage. At this point, we assume the current is stable, and the voltage across the capacitor is given by:
+
+
+$V_c = \frac{1}{C} \int_0^t I  dt$
+
+
+This equation shows that the voltage increases linearly with time. Consequently, if the current is halved, it takes twice as long to reach the same voltage.
+In our case, the current varies ish linearly with temperature. This means that at different temperatures, the voltage across the capacitor, $V_{cap}$, reaches a ceartain voltage value at different times.
+We can find a formula for the time required to increase the voltage to 0.6V, which is the voltage used in this circuit.
+
+To turn this rising voltage into a digital signal, we use a comparator. The idea is to check when the voltage exceeds a certain voltage, this case 0.6V.  
+If the voltage across the capacitor, $V_{cap}$, is below 0.6V, the output is 0. if its above 0.6V, the output switches to 1. This comparison is done using a comparator, and in this project a OTA is used.
+
+
+
+$0.6 = \frac{1}{c} \int_0^t I$ -> $0.6C = I * t$ -> $t = 0.6 \frac{C}{I} $
+
+
+
+To convert the rising voltage into a digital signal, we send it into the comparator that checks when it is larger than 0.6V.  
+If the voltage across the capacitor, $V_{cap}$, is below 0.6V, the output remains 0. Once it surpasses 0.6V, the output switches to 1. This output is generated using a comparator, and in this design, an OTA is used as an comparator.
+
+After a certain period, which is going to be constnat, maybe 20us, the circuit's reset signal goes high, which shorts the capacitor and resets its voltage to 
+$V_C = 0 + \text{charge injection}$
+From this point, the voltage starts increasing again, taking a time t  to reach the threshold.  
+Before the reset signal goes high, the output remains 1. When the circuit resets, the output switches to 0 and then returns to 1 after a certain time t. This time t is proportional to temperature.  
+To measure this, we implement a counter—designed in Verilog for this project—that tracks the time from reset until the output goes high again. The counter's output then provides a digital value corresponding to the temperature.
+
+
+
+
+
+
+
+
+## pictures :))
 
 bilde jeg kanskje vil ha?
 -v(cap) øker og v(out) og v(reset) viser hvordan du tar tid med v(dec_b).
 
 -output tegning
 
+-blokk diagram
+
+
+
+
+
+
+
+# comments on the current state of the circuit
 
 
 
