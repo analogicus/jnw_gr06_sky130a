@@ -63,7 +63,37 @@ For the course TTT4188 Advanced Integrated circuits
 
 # How the circuit works
 
-FYLL INN HER!
+To describe the circuit i want to split it into two different parts.
+1) Circuit to generat the temperature dependent current
+2) turning the current into a rising voltage and using it to create a digital output.
+
+1. Creating the current
+
+
+2. making the current into a digital value.
+The current from (1) is taken and put into a capacitor to then create a risign voltage. We as ume that at this point the current is stabil, and the voltage of the capacitor is: $V_c = \frac{1}{c}\int_0^t I$. This gives us a voltage that increases linearly with time, menaing that if the current is half, it takes twice as long to reach the same voltage. We got a current that changes lineary ish with temperatur, meaning that at different temperatures the voltage over the capacitor reaches a voltage $V_{cap}$ with more or less time. A fomula for how long it takes to increase the voltage to 0.6, which is used in this circuit.
+
+  $ 0.6 = \frac{1}{c}\int_0^t I$ -> $0.6C = I * t$ -> $t = 0.6 \frac{C}{I}$
+
+  To make this increasing voltage into a digital value, it is sendt into a comparator with the value we want to compare it too, meaning that we want to see when it is larger than a certain voltage, which in this circuit is 0.6V. When the voltage over the capacitor $V_{cap}$ is lower than 0.6V, we get an output of 0, and when it is larager we get an output of 1. We create this output with a comperator, where an OTA was used in this design. 
+
+  The output would 
+
+
+
+
+bilde jeg kanskje vil ha?
+-v(cap) øker og v(out) og v(reset) viser hvordan du tar tid med v(dec_b).
+
+-output tegning
+
+
+
+
+
+
+
+
 
 <br />
 <!--- ################################################################################################################# --->
