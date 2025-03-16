@@ -261,22 +261,28 @@ This sections shows the simulations results and some comments around them. All t
 This section goes throguh the different circuit blocks' results one by one.
 This section does not go throug the Test benches' results. Since they are only used to analyse the circuit OP state, and i dont know how to show it well.  
 
+At the JNW_GR06 results you can see CLK cycles on the y axis, this value is how high the counter got.
+
 <br />
 <!--- ################################################################################################################# --->
 
 ## JNW_GR06
 
-### The results from a monte carlo method simulations With 0 to 2 point calibration
-
+### The results from a Monte Carlo method simulations With 0 to 2 point calibration
+#### No calibration
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_0_calibration.png)
+
+#### 1 point calibration at 60 deg C
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_1_calibration.png)
+
+#### 2 point calibration at 60 deg C and -40 deg C
 ![DIFF_INPUT_OTA_INPUT](sim/JNW_GR06/pictures/MC_2_calibration.png)
 
 
 <br />
 
 
-### The results from a all corners and high, typical and low voltage simulated simulations With 0 to 2 point calibration
+### The results from all corners simulated. Voltage was not changed since it made the circuit not work
 
 <br />
 
@@ -311,6 +317,7 @@ This section does not go throug the Test benches' results. Since they are only u
 
 
 ## The PTAT current out of the circuit in all corners and voltages.
+### The problems you can see at the end is most likely from the oppamp getting a high offset and giving a too high voltage. will look into
 
 ![DIFF_INPUT_OTA_INPUT](sim/temp_affected_current/pictures/ALL_CORNERS_0_calibration.png)
 
