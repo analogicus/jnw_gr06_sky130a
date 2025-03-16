@@ -6,7 +6,7 @@
 .include ../../../work/lpe/COMP_lpe.spi
 #else
 .include ../../../work/xsch/COMP.spice
-#endif
+#endifcode 
 
 *-----------------------------------------------------------------
 * OPTIONS
@@ -17,21 +17,21 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-
 .param AVDD = {vdda}
+
+
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS  dc 1.8
-
-VLTCH ltch vss PULSE(0 0.8 10n 0 0 10n 20n)
+VDD  VDD  VSS  dc {AVDD}
 
 
-
-VIN+ IP VSS dc 0.900001
-VIN- IN VSS dc 0.90
+VIN+ IN+ VIN_OFFSET+     dc 0 sin (0 30m 1Meg 0 0 0) 
+VIN- IN- VIN_OFFSET-     dc 0 sin (0 0m 1Meg 0 0 180) 
+VOFFP VIN_OFFSET+ VSS dc 0.8
+VOFFN VIN_OFFSET- VSS dc 0.8
 
 
 *-----------------------------------------------------------------
@@ -42,7 +42,9 @@ VIN- IN VSS dc 0.90
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
+.save i(IB) v(OUT)
 .save all
+
 
 
 *----------------------------------------------------------------
@@ -55,11 +57,8 @@ set color1=black
 unset askquit
 
 
+tran 1n 8u 0.1p
 
-*optran 0 0 0 1n 1u 0
-
-
-tran 1n 40n 1p
 
 write
 quit
@@ -68,3 +67,6 @@ quit
 .endc
 
 .end
+
+
+

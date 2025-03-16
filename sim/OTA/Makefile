@@ -17,7 +17,7 @@ test:
 	${MAKE} typical OPT="Debug"
 
 idk: netlist clean
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss, Ktt, Kff" "Tl" "Vl"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss, Ksf, Kfs, Kff" "Th" "Vl, Vl"
 	python plot.py
 
 

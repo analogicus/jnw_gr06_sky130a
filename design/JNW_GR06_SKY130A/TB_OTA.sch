@@ -23,14 +23,14 @@ C {devices/vsource.sym} -300 30 0 0 {name=V2 value=0.7 savecurrent=false}
 C {devices/lab_wire.sym} -300 -40 0 0 {name=p5 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 -40 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 10 0 0 {name=p7 sig_type=std_logic lab=IN}
-C {devices/simulator_commands_shown.sym} 360 -100 0 0 {name=COMMANDS
+C {devices/simulator_commands_shown.sym} 350 -100 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="
 
 .param mc_mm_switch=0
 .param mc_pr_switch=0
-.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
+.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/ss.spi
 .option savecurrents
 .option gmin=1e-15 temp=-40
 .save all

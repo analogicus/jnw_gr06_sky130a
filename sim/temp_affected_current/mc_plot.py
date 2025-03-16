@@ -40,7 +40,7 @@ def plot_yaml_file(fname, name, calibration_order):
         if (calibration_order == 1):
             temps[int(temp)] = (float(obj[o]) -float(obj["deg_60"]))*1e6 
         elif (calibration_order == 2):
-            temps[int(temp)] = (float(obj[o]) -float(obj["deg_120"]))*1e6 *-100/ (((float(obj["deg_-40"])-float(obj["deg_120"]))*1e6)) + 100 #ganger 1000 for å få clk cylcles
+            temps[int(temp)] = (float(obj[o]) -float(obj["deg_80"]))*1e6 *-100/ (((float(obj["deg_-40"])-float(obj["deg_80"]))*1e6)) + 100 #ganger 1000 for å få clk cylcles
         else:
             temps[int(temp)] = (float(obj[o]))*1e6  
         #deciding calubration order

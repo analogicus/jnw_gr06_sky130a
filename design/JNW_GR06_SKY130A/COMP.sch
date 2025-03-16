@@ -4,86 +4,89 @@ K {}
 V {}
 S {}
 E {}
-N 200 -310 200 -260 {lab=VDD}
-N 320 -310 320 -260 {lab=VDD}
-N 200 -310 320 -310 {lab=VDD}
-N 200 -230 320 -230 {lab=VDD}
-N 260 -310 260 -230 {lab=VDD}
-N 580 -310 580 -260 {lab=VDD}
-N 700 -310 700 -260 {lab=VDD}
-N 580 -310 700 -310 {lab=VDD}
-N 580 -230 700 -230 {lab=VDD}
-N 640 -310 640 -230 {lab=VDD}
-N 320 -310 580 -310 {lab=VDD}
-N 320 -200 320 -40 {lab=OUT-}
-N 200 -200 200 -160 {lab=OUT-}
-N 200 -160 320 -160 {lab=OUT-}
-N 320 20 320 110 {lab=lower_left}
-N 200 80 200 110 {lab=lower_left}
-N 200 80 320 80 {lab=lower_left}
-N 200 140 320 140 {lab=VSS}
-N 200 170 200 220 {lab=VSS}
-N 200 220 320 220 {lab=VSS}
-N 320 170 320 220 {lab=VSS}
-N 580 -200 580 -40 {lab=OUT}
-N 580 20 580 110 {lab=lower_right}
-N 700 80 700 110 {lab=lower_right}
-N 580 80 700 80 {lab=lower_right}
-N 580 140 700 140 {lab=VSS}
-N 700 170 700 220 {lab=VSS}
-N 580 220 700 220 {lab=VSS}
-N 580 170 580 220 {lab=VSS}
-N 320 220 580 220 {lab=VSS}
-N 640 140 640 220 {lab=VSS}
-N 260 140 260 220 {lab=VSS}
-N 360 140 420 140 {lab=lower_right}
-N 490 140 540 140 {lab=lower_left}
-N 420 80 490 140 {lab=lower_left}
-N 420 140 490 80 {lab=lower_right}
-N 490 80 580 80 {lab=lower_right}
-N 320 80 420 80 {lab=lower_left}
-N 700 -200 700 -160 {lab=OUT}
-N 580 -160 700 -160 {lab=OUT}
-N 490 -230 540 -230 {lab=OUT-}
-N 490 -160 580 -160 {lab=OUT}
-N 360 -230 410 -230 {lab=OUT}
-N 410 -230 490 -160 {lab=OUT}
-N 410 -160 490 -230 {lab=OUT-}
-N 320 -160 410 -160 {lab=OUT-}
-N 0 -310 200 -310 {lab=VDD}
-N -0 220 200 220 {lab=VSS}
-N 220 -10 280 -10 {lab=ltch}
-N 620 -10 670 -10 {lab=ltch}
-N 320 -10 580 -10 {lab=VSS}
-N 700 -160 800 -160 {lab=OUT}
-N 100 -230 160 -230 {lab=ltch}
-N 740 -230 800 -230 {lab=ltch}
-N 110 140 160 140 {lab=IP}
-N 740 140 810 140 {lab=IP}
-C {devices/ipin.sym} 0 -310 0 0 {name=p1 lab=VDD
-}
-C {devices/ipin.sym} 0 0 0 0 {name=p2 lab=ltch}
-C {devices/ipin.sym} 0 220 0 0 {name=p3 lab=VSS}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 160 -230 0 0 {name=x1 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 360 -230 0 1 {name=x2 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 540 -230 0 0 {name=x3 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 740 -230 0 1 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 280 -10 0 0 {name=x5 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 160 140 0 0 {name=x6 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 360 140 0 1 {name=x7 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 620 -10 0 1 {name=x8 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 740 140 0 1 {name=x9 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 540 140 0 0 {name=x10 }
-C {devices/lab_pin.sym} 220 -10 0 0 {name=p4 sig_type=std_logic lab=ltch}
-C {devices/lab_pin.sym} 670 -10 0 1 {name=p5 sig_type=std_logic lab=ltch}
-C {devices/lab_pin.sym} 440 -10 0 1 {name=p6 sig_type=std_logic lab=VSS
-}
-C {devices/opin.sym} 800 -160 0 0 {name=p7 lab=OUT}
-C {devices/lab_pin.sym} 200 80 0 0 {name=p9 sig_type=std_logic lab=lower_left}
-C {devices/lab_pin.sym} 700 80 0 1 {name=p10 sig_type=std_logic lab=lower_right
-}
-C {devices/lab_pin.sym} 100 -230 0 0 {name=p11 sig_type=std_logic lab=ltch}
-C {devices/lab_pin.sym} 800 -230 0 1 {name=p12 sig_type=std_logic lab=ltch}
-C {devices/ipin.sym} 110 140 0 0 {name=p13 lab=IP}
-C {devices/ipin.sym} 810 140 0 1 {name=p14 lab=IN}
-C {devices/lab_pin.sym} 200 -160 0 0 {name=p8 sig_type=std_logic lab=OUT-}
+N 260 -70 260 10 {lab=GATE}
+N 450 -70 450 10 {lab=#net1}
+N 300 40 410 40 {lab=GATE}
+N 260 70 260 120 {lab=#net2}
+N 260 120 450 120 {lab=#net2}
+N 450 70 450 120 {lab=#net2}
+N 210 40 260 40 {lab=#net2}
+N 210 40 210 90 {lab=#net2}
+N 210 90 260 90 {lab=#net2}
+N 450 40 500 40 {lab=#net2}
+N 500 40 500 90 {lab=#net2}
+N 450 90 500 90 {lab=#net2}
+N 350 -30 350 40 {lab=GATE}
+N 260 -30 350 -30 {lab=GATE}
+N 260 -170 260 -130 {lab=OTA_SPLIT}
+N 260 -170 450 -170 {lab=OTA_SPLIT}
+N 450 -170 450 -130 {lab=OTA_SPLIT}
+N 420 -100 450 -100 {lab=OTA_SPLIT}
+N 420 -170 420 -100 {lab=OTA_SPLIT}
+N 260 -100 290 -100 {lab=OTA_SPLIT}
+N 290 -170 290 -100 {lab=OTA_SPLIT}
+N 130 -100 220 -100 {lab=IN+}
+N 490 -100 570 -100 {lab=IN-}
+N 350 -230 350 -170 {lab=OTA_SPLIT}
+N -140 -380 350 -380 {lab=VDD}
+N 350 -380 350 -290 {lab=VDD}
+N 20 -260 310 -260 {lab=IB_GATE}
+N -20 -380 -20 -290 {lab=VDD}
+N -20 -230 -20 -180 {lab=IB_GATE}
+N -70 -260 -20 -260 {lab=VDD}
+N -70 -320 -70 -260 {lab=VDD}
+N -70 -320 -20 -320 {lab=VDD}
+N 350 -260 400 -260 {lab=VDD}
+N 400 -320 400 -260 {lab=VDD}
+N 350 -320 400 -320 {lab=VDD}
+N 160 190 350 190 {lab=VSS}
+N 140 190 160 190 {lab=VSS}
+N -20 -180 60 -180 {lab=IB_GATE}
+N 60 -260 60 -180 {lab=IB_GATE}
+N -20 -180 -20 -110 {lab=IB_GATE}
+N -100 190 140 190 {lab=VSS}
+N -20 120 -20 190 {lab=VSS}
+N -20 -50 -20 60 {lab=IB_GATE}
+N 350 120 350 130 {lab=#net2}
+N 450 -30 600 -30 {lab=#net1}
+N -20 -110 -20 -50 {lab=IB_GATE}
+N 660 -280 740 -280 {lab=IB_GATE}
+N 780 -380 780 -310 {lab=VDD}
+N 350 -380 780 -380 {lab=VDD}
+N 780 -280 830 -280 {lab=VDD}
+N 830 -320 830 -280 {lab=VDD}
+N 780 -320 830 -320 {lab=VDD}
+N 780 -250 780 -60 {lab=OUT}
+N 350 190 770 190 {lab=VSS}
+N 780 -0 780 190 {lab=VSS}
+N 770 190 780 190 {lab=VSS}
+N 600 -30 740 -30 {lab=#net1}
+N 780 -100 920 -100 {lab=OUT}
+N 780 -30 830 -30 {lab=VSS}
+N 830 -30 830 20 {lab=VSS}
+N 780 20 830 20 {lab=VSS}
+C {devices/ipin.sym} 130 -100 0 0 {name=p1 lab=IN+}
+C {devices/ipin.sym} 570 -100 0 1 {name=p2 lab=IN-}
+C {devices/ipin.sym} -140 -380 0 0 {name=p3 lab=VDD}
+C {devices/ipin.sym} -100 190 0 0 {name=p5 lab=VSS}
+C {devices/lab_wire.sym} 310 -170 0 0 {name=p6 sig_type=std_logic lab=OTA_SPLIT}
+C {devices/lab_wire.sym} 260 -30 0 0 {name=p7 sig_type=std_logic lab=GATE}
+C {devices/res_ac.sym} -20 90 0 0 {name=R1
+value=3000k
+ac=10Meg
+m=1}
+C {devices/lab_wire.sym} 90 -260 0 0 {name=p9 sig_type=std_logic lab=IB_GATE}
+C {devices/opin.sym} 920 -100 0 0 {name=p8 lab=OUT}
+C {devices/res_ac.sym} 350 160 0 0 {name=R3
+value=0
+ac=0
+m=1}
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} 490 -100 0 1 {name=x5}
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym} 220 -100 0 0 {name=x6}
+C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 20 -260 0 1 {name=x1}
+C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 310 -260 0 0 {name=x2}
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 410 40 0 0 {name=x3 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 300 40 0 1 {name=x4 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 740 -280 0 0 {name=x7[3:0]}
+C {devices/lab_wire.sym} 660 -280 0 0 {name=p4 sig_type=std_logic lab=IB_GATE}
+C {JNW_ATR_SKY130A/JNWATR_NCH_8C1F2.sym} 740 -30 0 0 {name=x8 }
