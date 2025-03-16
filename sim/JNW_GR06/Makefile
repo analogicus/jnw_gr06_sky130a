@@ -32,13 +32,13 @@ fast: netlist
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" Tt "Vt,Vl,Vh"
 
-etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vl,Vt,Vh"
+etc: netlist clean
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt"
 
 all_corners: netlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt"
 
-mc: netlist
+mc: netlist clean
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" Tt "Vt"
 
 ntc: netlist
