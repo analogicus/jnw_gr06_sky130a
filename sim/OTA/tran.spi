@@ -25,13 +25,13 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS  dc 1.8
+VDD  VDD  VSS  dc {AVDD}
 
 
 VIN+ IN+ VIN_OFFSET+     dc 0 sin (0 30m 1Meg 0 0 0) 
 VIN- IN- VIN_OFFSET-     dc 0 sin (0 0m 1Meg 0 0 180) 
-VOFFP VIN_OFFSET+ VSS dc 0.12
-VOFFN VIN_OFFSET- VSS dc 0.12
+VOFFP VIN_OFFSET+ VSS dc 0.8
+VOFFN VIN_OFFSET- VSS dc 0.8
 
 
 *-----------------------------------------------------------------
@@ -56,9 +56,9 @@ set color0=white
 set color1=black
 unset askquit
 
+optran 0 0 0 1n 1u 0
+tran 1n 8u 0.1p
 
-
-tran 1n 10u 0.1p
 
 write
 quit

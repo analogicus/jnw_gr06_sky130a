@@ -12,7 +12,7 @@ def main(name):
     obj = yaml.safe_load(fi)
 
   # Do something to parameters
-  cs.rawplot(name + ".raw","time","v(in+),v(in-),v(out)",ptype="",fname="DIFF_INPUT_OTA_INPUT.png")
+  cs.rawplot(name + ".raw","time","v(in+),v(in-)",ptype="",fname="DIFF_INPUT_OTA_INPUT.png")
 
 
 

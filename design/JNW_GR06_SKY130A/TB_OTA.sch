@@ -14,23 +14,23 @@ N 210 50 210 140 {lab=0}
 N -370 60 -300 60 {lab=0}
 N -300 -40 -300 -0 {lab=IN}
 C {JNW_GR06_SKY130A/OTA.sym} -70 -10 0 0 {name=x1}
-C {devices/vsource.sym} -370 30 0 0 {name=V1 value=1.8 savecurrent=false}
+C {devices/vsource.sym} -370 30 0 0 {name=V1 value=1.7 savecurrent=false}
 C {devices/lab_wire.sym} 150 140 0 0 {name=p1 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 110 0 0 {name=p2 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 -40 0 0 {name=p3 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} -20 -160 0 0 {name=p4 sig_type=std_logic lab=VDD}
-C {devices/vsource.sym} -300 30 0 0 {name=V2 value=1 savecurrent=false}
+C {devices/vsource.sym} -300 30 0 0 {name=V2 value=0.7 savecurrent=false}
 C {devices/lab_wire.sym} -300 -40 0 0 {name=p5 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 -40 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} -150 10 0 0 {name=p7 sig_type=std_logic lab=IN}
-C {devices/simulator_commands_shown.sym} 360 -100 0 0 {name=COMMANDS
+C {devices/simulator_commands_shown.sym} 350 -100 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="
 
 .param mc_mm_switch=0
 .param mc_pr_switch=0
-.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/tt.spi
+.include ~/pro/aicex/ip/jnw_sv_sky130a/design/JNW_SV_SKY130A/simulation/ss.spi
 .option savecurrents
 .option gmin=1e-15 temp=-40
 .save all
