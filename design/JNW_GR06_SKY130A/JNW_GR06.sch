@@ -21,34 +21,35 @@ N 80 -80 80 -0 {lab=VSS}
 N 180 -130 180 -120 {lab=CAP}
 N 180 -60 180 0 {lab=VSS}
 N -250 -390 -250 -0 {lab=VSS}
-N -310 -410 -250 -410 {lab=VDD}
 N 180 -380 180 -320 {lab=CAP}
 N 180 -410 250 -410 {lab=CAP}
 N 130 -360 250 -360 {lab=#net1}
 N 120 -480 120 -320 {lab=#net1}
 N 120 -360 130 -360 {lab=#net1}
-N -250 -260 120 -260 {lab=VSS}
-N -250 -540 120 -540 {lab=VDD}
 N -250 -540 -250 -410 {lab=VDD}
 N 380 -540 380 -480 {lab=VDD}
-N 120 -540 380 -540 {lab=VDD}
 N 380 -270 380 0 {lab=VSS}
 N 530 -380 670 -380 {lab=OUT}
 N 180 -260 180 -200 {lab=CAP}
-C {devices/ipin.sym} -310 -410 0 0 {name=p1 lab=VDD}
+N -250 -240 120 -240 {lab=VSS}
+N 120 -580 120 -560 {lab=#net2}
+N -310 -680 380 -680 {lab=VDD}
+N 120 -680 120 -660 {lab=VDD}
+N 380 -680 380 -540 {lab=VDD}
+N -250 -680 -250 -540 {lab=VDD}
+N 80 -280 100 -280 {lab=VDD}
+N 80 -680 80 -280 {lab=VDD}
+N 80 -620 100 -620 {lab=VDD}
+N 80 -520 100 -520 {lab=VDD}
+C {devices/ipin.sym} -310 -680 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -460 0 0 0 {name=p2 lab=VSS}
 C {devices/lab_pin.sym} 180 -150 0 1 {name=p4 sig_type=std_logic lab=CAP}
 C {devices/ipin.sym} -30 -80 0 0 {name=p3 lab=reset}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 180 -90 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 180 -90 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=10 spiceprefix=X}
 C {JNW_GR06_SKY130A/temp_affected_current.sym} -100 -400 0 0 {name=x1}
 C {JNW_GR06_SKY130A/OTA.sym} 330 -380 0 0 {name=x3}
-C {devices/res_ac.sym} 120 -510 0 0 {name=R2
-value=30k
-ac=10k
-m=1}
-C {devices/res_ac.sym} 120 -290 0 0 {name=R1
-value=15k
-ac=2k
-m=1}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 0 -80 0 0 {name=x2}
 C {devices/opin.sym} 670 -380 0 0 {name=p6 lab=OUT}
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 120 -480 1 1 {name=x5 }
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 120 -240 1 1 {name=x6 }
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 120 -580 1 1 {name=x7 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 0 -80 0 0 {name=x4 }

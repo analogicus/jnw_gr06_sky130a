@@ -24,7 +24,7 @@ wave: netlist
 typical: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 
-slow: netlist
+slow: clean netlist
 	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss Tt Vl
 
 fast: netlist
@@ -34,7 +34,7 @@ tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" Tt "Vt,Vl,Vh"
 
 etc: netlist clean
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" Tt "Vt, Vh, Vl"
 	python plot.py
 
 all_corners: netlist

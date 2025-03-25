@@ -34,11 +34,12 @@ slow: netlist
 fast: netlist
 	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
 
-tfs: netlist
-	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
+tfs: netlist clean
+	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ksf" "Tl" "Vh, Vl"
+	python plot.py
 
 etc: netlist clean
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs, Ktt" "Tt,Tl,Th" "Vt"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Tt,Tl,Th" "Vl"
 	python plot.py
 
 mc: netlist clean

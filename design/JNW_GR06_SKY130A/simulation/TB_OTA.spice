@@ -1,7 +1,7 @@
 ** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_GR06_SKY130A/TB_OTA.sch
 **.subckt TB_OTA
 x1 VDD IN IN out 0 OTA
-V1 VDD 0 1.7
+V1 VDD 0 1.8
 V2 IN 0 0.7
 XC1 out 0 sky130_fd_pr__cap_mim_m3_1 W=1 L=1 MF=1 m=1
 **** begin user architecture code
@@ -38,69 +38,84 @@ exit
 *.ipin VDD
 *.ipin VSS
 *.opin OUT
-R1 IB_GATE VSS 3000k ac=10Meg m=1
-R3 net2 VSS 0 ac=0 m=1
-x5 net1 IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_8C1F2
-x6 GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_8C1F2
-x1 IB_GATE IB_GATE VDD VDD JNWATR_PCH_12C1F2
-x2 OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_12C1F2
-x3 net1 GATE net2 net2 JNWATR_NCH_2C5F0
-x4 GATE GATE net2 net2 JNWATR_NCH_2C5F0
-x7<1> OUT net1 net2 net2 JNWATR_NCH_8C1F2
-x7<0> OUT net1 net2 net2 JNWATR_NCH_8C1F2
-x8 OUT IB_GATE VDD VDD JNWATR_PCH_12C1F2
+x5<3> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5<2> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5<1> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x5<0> GATE IN+ OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x6<3> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x6<2> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x6<1> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x6<0> OUT IN- OTA_SPLIT OTA_SPLIT JNWATR_PCH_4C5F0
+x1 OTA_SPLIT IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x2 IB_GATE IB_GATE VDD VDD JNWATR_PCH_4C5F0
+x3 VSS net1 VSS JNWTR_RPPO16
+x4 net1 net2 VSS JNWTR_RPPO16
+x5 net2 IB_GATE VSS JNWTR_RPPO16
+x6 OUT GATE VSS VSS JNWATR_NCH_4C1F2
+x7 GATE GATE VSS VSS JNWATR_NCH_4C1F2
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym # of pins=4
-** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sym
-** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_8C1F2.sch
-.subckt JNWATR_PCH_8C1F2 D G S B
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sch
+.subckt JNWATR_PCH_4C5F0 D G S B
 *.iopin D
 *.iopin G
 *.iopin S
 *.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=5.76 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym # of pins=4
-** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym
-** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sch
-.subckt JNWATR_PCH_12C1F2 D G S B
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RPPO16.sym # of pins=3
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO16.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_RPPO16.sch
+.subckt JNWTR_RPPO16 N P B
+*.iopin P
+*.iopin N
+*.iopin B
+XXA1 N P B JNWTR_RES16
+.ends
+
+
+* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym # of pins=4
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sch
+.subckt JNWATR_NCH_4C1F2 D G S B
 *.iopin D
 *.iopin G
 *.iopin S
 *.iopin B
-XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.22 W=8.32 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.22 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym # of pins=4
-** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym
-** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sch
-.subckt JNWATR_NCH_2C5F0 D G S B
-*.iopin D
-*.iopin G
-*.iopin S
+* expanding   symbol:  JNW_TR_SKY130A/JNWTR_RES16.sym # of pins=3
+** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_RES16.sym
+** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_TR_SKY130A/JNWTR_RES16.sch
+.subckt JNWTR_RES16 N P B
+*.iopin N
+*.iopin P
 *.iopin B
-XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=1.92 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-.ends
-
-
-* expanding   symbol:  JNW_ATR_SKY130A/JNWATR_NCH_8C1F2.sym # of pins=4
-** sym_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_8C1F2.sym
-** sch_path: /home/erikkjen/pro/aicex/ip/jnw_gr06_sky130a/design/JNW_ATR_SKY130A/JNWATR_NCH_8C1F2.sch
-.subckt JNWATR_NCH_8C1F2 D G S B
-*.iopin D
-*.iopin G
-*.iopin S
-*.iopin B
-XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.22 W=5.76 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
-+ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR1_0 INT_0 N B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_1 INT_1 INT_0 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_2 INT_2 INT_1 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_3 INT_3 INT_2 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_4 INT_4 INT_3 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_5 INT_5 INT_4 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_6 INT_6 INT_5 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_7 INT_7 INT_6 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_8 INT_8 INT_7 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_9 INT_9 INT_8 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_10 INT_10 INT_9 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_11 INT_11 INT_10 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_12 INT_12 INT_11 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_13 INT_13 INT_12 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_14 INT_14 INT_13 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
+XR1_15 P INT_14 B sky130_fd_pr__res_high_po W=0.36 L=7.36 mult=1 m=1
 .ends
 
 .end
