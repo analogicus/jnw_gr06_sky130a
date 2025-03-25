@@ -45,7 +45,7 @@ C {devices/ipin.sym} -310 -680 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -460 0 0 0 {name=p2 lab=VSS}
 C {devices/lab_pin.sym} 180 -150 0 1 {name=p4 sig_type=std_logic lab=CAP}
 C {devices/ipin.sym} -30 -80 0 0 {name=p3 lab=reset}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 180 -90 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=3 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 180 -90 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=10 spiceprefix=X}
 C {JNW_GR06_SKY130A/temp_affected_current.sym} -100 -400 0 0 {name=x1}
 C {JNW_GR06_SKY130A/OTA.sym} 330 -380 0 0 {name=x3}
 C {devices/opin.sym} 670 -380 0 0 {name=p6 lab=OUT}
