@@ -79,6 +79,17 @@ N 1050 400 1050 460 {lab=VSS}
 N 1000 460 1050 460 {lab=VSS}
 N 1000 430 1000 510 {lab=VSS}
 N 820 510 1000 510 {lab=VSS}
+N 310 290 350 290 {lab=RIGHT_SIDE}
+N 310 340 380 340 {lab=VR}
+N 310 340 310 350 {lab=VR}
+N 350 290 380 290 {lab=RIGHT_SIDE}
+N 460 290 490 290 {lab=#net3}
+N 490 290 490 340 {lab=#net3}
+N 460 340 490 340 {lab=#net3}
+N 420 270 520 270 {lab=VSS}
+N 520 270 520 360 {lab=VSS}
+N 420 360 520 360 {lab=VSS}
+N 520 360 520 510 {lab=VSS}
 C {devices/ipin.sym} -640 -260 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -160 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -250 -160 0 1 {name=x2 }
@@ -101,16 +112,14 @@ model=pnp_05v5_W3p40L3p40
 m=8
 spiceprefix=X
 }
-C {devices/res_ac.sym} 310 320 0 0 {name=R2
-value=100k
-ac=100k
-m=1}
 C {devices/lab_wire.sym} 720 -160 0 0 {name=p8 sig_type=std_logic lab=GATE}
 C {devices/opin.sym} 1390 90 0 0 {name=p9 lab=OUT}
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 0 -170 0 0 {name=x8}
 C {devices/lab_wire.sym} 310 360 0 1 {name=p10 sig_type=std_logic lab=VR}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 780 -160 0 0 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 1040 -170 0 1 {name=x7[9:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 1040 -170 0 1 {name=x1[9:0]}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 1120 -170 0 0 {name=x9 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 860 400 0 1 {name=x5[9:0] }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 960 400 0 0 {name=x6 }
+C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 380 340 0 0 {name=x7 }
+C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 460 290 2 0 {name=x10 }

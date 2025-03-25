@@ -14,7 +14,7 @@ N 210 50 210 140 {lab=0}
 N -370 60 -300 60 {lab=0}
 N -300 -40 -300 -0 {lab=IN}
 C {JNW_GR06_SKY130A/OTA.sym} -70 -10 0 0 {name=x1}
-C {devices/vsource.sym} -370 30 0 0 {name=V1 value=1.7 savecurrent=false}
+C {devices/vsource.sym} -370 30 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/lab_wire.sym} 150 140 0 0 {name=p1 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 110 0 0 {name=p2 sig_type=std_logic lab=0}
 C {devices/lab_wire.sym} -370 -40 0 0 {name=p3 sig_type=std_logic lab=VDD}
