@@ -1,0 +1,19 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1742943600
+<< checkpaint >>
+rect 0 0 14904 1080
+use temp_affected_current x1 ../JNW_GR06_SKY130A
+transform 1 0 0 0 1 0
+box 0 0 11448 1080
+use JNWATR_NCH_4C5F0 x2 ../JNW_ATR_SKY130A
+transform 1 0 11448 0 1 0
+box 11448 0 12600 800
+use OTA x3 ../JNW_GR06_SKY130A
+transform 1 0 12600 0 1 0
+box 12600 0 14904 800
+<< labels >>
+<< properties >>
+string FIXED_BBOX 0 0 14904 1080
+<< end >>
