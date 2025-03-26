@@ -1,67 +1,66 @@
 magic
 tech sky130A
-magscale 1 2
-timestamp 1742994806
-use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_0
-timestamp 1742994806
-transform 1 0 1152 0 1 4800
-box 0 -1200 361 200
+timestamp 1742998585
+use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_0 ../JNW_ATR_SKY130A
+timestamp 1734044400
+transform 1 0 7284 0 1 2400
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_1
-timestamp 1742994806
-transform 1 0 1152 0 1 4000
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 7284 0 1 2000
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_2
-timestamp 1742994806
-transform 1 0 1152 0 1 3198
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 7284 0 1 1600
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_3
-timestamp 1742994806
-transform 1 0 1152 0 1 1600
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 7284 0 1 800
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_4
-timestamp 1742994806
-transform 1 0 1152 0 1 800
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 7284 0 1 400
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  JNWATR_PCH_4C5F0_5
-timestamp 1742994806
-transform 1 0 1152 0 1 0
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 7284 0 1 0
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  xa2
-timestamp 1742994806
-transform 1 0 -762 0 1 0
-box 0 -1200 361 200
+timestamp 1734044400
+transform 1 0 3916 0 1 0
+box -92 -64 668 464
 use JNWATR_PCH_4C5F0  xa3
-timestamp 1742994806
-transform 1 0 -760 0 1 800
-box 0 -1200 361 200
-use JNWATR_PCH_4C5F0  xb5[3:0]
-timestamp 1742994806
-transform 1 0 1152 0 1 2400
-box 0 -1200 361 200
-use JNWATR_PCH_4C5F0  xb6[3:0]
-timestamp 1742994806
-transform 1 0 1152 0 1 5600
-box 0 -1200 361 200
-use JNWATR_NCH_4C5F0  xc6
-timestamp 1742994806
-transform 1 0 4800 0 1 -8
-box 0 -1200 361 200
-use JNWATR_NCH_4C5F0  xc7
-timestamp 1742994806
-transform 1 0 4798 0 1 800
-box 0 -1200 361 200
-use JNWTR_RPPO16  xd5 ../JNW_TR_SKY130A
+timestamp 1734044400
+transform 1 0 3920 0 1 400
+box -92 -64 668 464
+use JNWTR_RPPO16  xb5 ../JNW_TR_SKY130A
 timestamp 1742987017
-transform 1 0 3420 0 1 2446
-box 0 0 4472 3440
-use JNWTR_RPPO16  xe4
+transform 1 0 4752 0 1 1759
+box 0 0 2236 1720
+use JNWTR_RPPO16  xc4
 timestamp 1742987017
-transform 1 0 8070 0 1 410
-box 0 0 4472 3440
-use JNWTR_RPPO16  xf3
+transform 1 0 4756 0 1 0
+box 0 0 2236 1720
+use JNWTR_RPPO16  xd3
 timestamp 1742987017
-transform 1 0 12870 0 1 1376
-box 0 0 4472 3440
+transform 1 0 4760 0 1 -1832
+box 0 0 2236 1720
+use JNWATR_PCH_4C5F0  xe5[3:0]
+timestamp 1734044400
+transform 1 0 7284 0 1 1200
+box -92 -64 668 464
+use JNWATR_PCH_4C5F0  xe6[3:0]
+timestamp 1734044400
+transform 1 0 7284 0 1 2800
+box -92 -64 668 464
+use JNWATR_NCH_4C5F0  xf6 ../JNW_ATR_SKY130A
+timestamp 1734044400
+transform 1 0 8134 0 1 0
+box -92 -64 668 464
+use JNWATR_NCH_4C5F0  xf7
+timestamp 1734044400
+transform 1 0 8130 0 1 400
+box -92 -64 668 464
 << properties >>
-string FIXED_BBOX 0 0 16872 3440
+string FIXED_BBOX 0 0 8436 1720
 << end >>
