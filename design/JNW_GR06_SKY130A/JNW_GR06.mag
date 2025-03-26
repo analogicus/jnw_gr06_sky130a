@@ -1,19 +1,36 @@
 magic
 tech sky130A
-magscale 1 2
-timestamp 1742943600
-<< checkpaint >>
-rect 0 0 14904 1080
-use temp_affected_current x1 ../JNW_GR06_SKY130A
-transform 1 0 0 0 1 0
-box 0 0 11448 1080
-use JNWATR_NCH_4C5F0 x2 ../JNW_ATR_SKY130A
-transform 1 0 11448 0 1 0
-box 11448 0 12600 800
-use OTA x3 ../JNW_GR06_SKY130A
-transform 1 0 12600 0 1 0
-box 12600 0 14904 800
-<< labels >>
+timestamp 1742994806
+<< error_s >>
+rect 6343 6121 7049 6161
+use JNWTR_RPPO4  JNWTR_RPPO4_0 ../JNW_TR_SKY130A
+timestamp 1742990092
+transform 1 0 13164 0 1 1782
+box 0 0 940 1720
+use temp_affected_current  xa1 ../JNW_GR06_SKY130A
+timestamp 1742994806
+transform 1 0 10 0 1 -560
+box 0 -683 12972 5300
+use JNWTR_RPPO4  xb7
+timestamp 1742990092
+transform 1 0 11662 0 1 5072
+box 0 0 940 1720
+use JNWTR_RPPO4  xc5
+timestamp 1742990092
+transform 1 0 13163 0 1 0
+box 0 0 940 1720
+use JNWTR_RPPO4  xd6
+timestamp 1742990092
+transform 1 0 0 0 1 5900
+box 0 0 940 1720
+use JNWATR_NCH_2C1F2  xe4 ../JNW_ATR_SKY130A
+timestamp 1734044400
+transform 1 0 205 0 1 5176
+box -92 -64 604 464
+use OTA  xf3 ../JNW_GR06_SKY130A
+timestamp 1742994806
+transform 1 0 2132 0 1 5900
+box -381 -604 8671 2943
 << properties >>
-string FIXED_BBOX 0 0 14904 1080
+string FIXED_BBOX 0 0 14060 7620
 << end >>
