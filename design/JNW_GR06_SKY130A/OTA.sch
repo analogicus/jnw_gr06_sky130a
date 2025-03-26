@@ -1,4 +1,5 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -66,12 +67,13 @@ C {devices/lab_wire.sym} -40 -140 0 0 {name=p6 sig_type=std_logic lab=OTA_SPLIT}
 C {devices/lab_wire.sym} -90 0 0 0 {name=p7 sig_type=std_logic lab=GATE}
 C {devices/lab_wire.sym} -260 -230 0 0 {name=p9 sig_type=std_logic lab=IB_GATE}
 C {devices/opin.sym} 250 0 0 0 {name=p8 lab=OUT}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=x5[3:0]}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=x6[3:0]}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=x1 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=x2 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 70 1 0 {name=x3 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -20 1 0 {name=x4 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -110 1 0 {name=x5 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=x7 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x6 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=xb5[3:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=xb6[3:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=xa3
+ }
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=xa2 }
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 70 1 0 {name=xf3 }
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -20 1 0 {name=xe4 }
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -110 1 0 {name=xd5 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=xc7 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=xc6 }
