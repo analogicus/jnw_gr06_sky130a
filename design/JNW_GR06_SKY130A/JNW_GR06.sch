@@ -44,6 +44,7 @@ N -850 -680 -850 -410 {lab=VDD}
 N -710 -680 -310 -680 {lab=VDD}
 N -930 0 -460 -0 {lab=VSS}
 N -850 -370 -850 -0 {lab=VSS}
+N -260 -680 -260 -660 {lab=VDD}
 C {devices/ipin.sym} -940 -680 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -930 0 0 0 {name=p2 lab=VSS}
 C {devices/lab_pin.sym} 180 -150 0 1 {name=p4 sig_type=std_logic lab=CAP}
