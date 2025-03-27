@@ -50,11 +50,11 @@ N 100 -0 250 -0 {lab=OUT}
 N 0 160 0 220 {lab=VSS}
 N -410 110 -390 110 {lab=VSS}
 N -410 110 -410 220 {lab=VSS}
-N -370 60 -370 70 {lab=#net1}
+N -370 60 -370 70 {lab=GATE}
 N -410 20 -390 20 {lab=VSS}
 N -410 30 -410 110 {lab=VSS}
 N -410 20 -410 30 {lab=VSS}
-N -370 -30 -370 -20 {lab=#net2}
+N -370 -30 -370 -20 {lab=AFTER_RESISTOR1}
 N -410 -70 -390 -70 {lab=VSS}
 N -410 -70 -410 20 {lab=VSS}
 N -370 -150 -370 -110 {lab=IB_GATE}
@@ -75,3 +75,5 @@ C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -20 1 0 {name=x4 }
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -110 1 0 {name=x5 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=x7 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x6 }
+C {devices/lab_wire.sym} -370 60 0 0 {name=p4 sig_type=std_logic lab=AFTER_RESISTOR2}
+C {devices/lab_wire.sym} -370 -30 0 0 {name=p10 sig_type=std_logic lab=AFTER_RESISTOR1}
