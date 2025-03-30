@@ -50,7 +50,7 @@ N 100 -0 250 -0 {lab=OUT}
 N 0 160 0 220 {lab=VSS}
 N -410 110 -390 110 {lab=VSS}
 N -410 110 -410 220 {lab=VSS}
-N -370 60 -370 70 {lab=GATE}
+N -370 60 -370 70 {lab=AFTER_RESISTOR2}
 N -410 20 -390 20 {lab=VSS}
 N -410 30 -410 110 {lab=VSS}
 N -410 20 -410 30 {lab=VSS}
@@ -66,14 +66,15 @@ C {devices/lab_wire.sym} -40 -140 0 0 {name=p6 sig_type=std_logic lab=OTA_SPLIT}
 C {devices/lab_wire.sym} -90 0 0 0 {name=p7 sig_type=std_logic lab=GATE}
 C {devices/lab_wire.sym} -260 -230 0 0 {name=p9 sig_type=std_logic lab=IB_GATE}
 C {devices/opin.sym} 250 0 0 0 {name=p8 lab=OUT}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=x5[3:0]}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=x6[3:0]}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=x1 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=x2 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 70 1 0 {name=x3 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -20 1 0 {name=x4 }
-C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -110 1 0 {name=x5 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=x7 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=x6 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -130 -70 0 0 {name=xd3[3:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 140 -70 0 1 {name=xe3[3:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -40 -230 0 0 {name=xa4b}
+C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -330 -230 0 1 {name=xa4a}
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 70 1 0 {name=xa1}
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -20 1 0 {name=xa2}
+C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -370 -110 1 0 {name=xa3
+}
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -50 70 0 1 {name=xd2 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 60 70 0 0 {name=xe2}
 C {devices/lab_wire.sym} -370 60 0 0 {name=p4 sig_type=std_logic lab=AFTER_RESISTOR2}
 C {devices/lab_wire.sym} -370 -30 0 0 {name=p10 sig_type=std_logic lab=AFTER_RESISTOR1}
