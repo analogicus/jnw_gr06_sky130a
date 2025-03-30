@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {Used to have stuff to do loop gain here. the lvs check does not like it. so i guess i got to make another latout for it. will see if i can fix it first} -150 -110 0 0 0.1 0.1 {}
 N -290 -130 -290 200 {lab=LEFT_SIDE}
 N -20 240 -20 280 {lab=LEFT_SIDE}
 N -290 200 -290 370 {lab=LEFT_SIDE}
@@ -36,7 +37,7 @@ N 720 -160 780 -160 {lab=GATE}
 N 100 110 210 110 {lab=VDD}
 N -170 110 -110 110 {lab=VSS}
 N -640 -260 -370 -260 {lab=VDD}
-N 0 -70 0 -40 {lab=LPO}
+N 0 -70 0 -40 {lab=GATE}
 N -690 510 -460 510 {lab=VSS}
 N 0 -260 0 -230 {lab=VDD}
 N -30 280 -20 280 {lab=LEFT_SIDE}
@@ -89,10 +90,11 @@ N 420 270 520 270 {lab=VSS}
 N 520 270 520 360 {lab=VSS}
 N 420 360 520 360 {lab=VSS}
 N 520 360 520 510 {lab=VSS}
-N 0 -90 -0 -70 {lab=LPO}
-N -0 -90 30 -90 {lab=LPO}
+N 0 -90 -0 -70 {lab=GATE}
+N -0 -90 30 -90 {lab=GATE}
 N -0 -130 30 -130 {lab=GATE}
 N -0 -160 0 -130 {lab=GATE}
+N 30 -130 30 -90 {lab=GATE}
 C {devices/ipin.sym} -640 -260 0 0 {name=p1 lab=VDD}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 270 -160 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} -250 -160 0 1 {name=x2 }
@@ -126,5 +128,3 @@ C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 860 400 0 1 {name=x5[9:0] }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 960 400 0 0 {name=x6 }
 C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 380 340 0 0 {name=x7 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 460 290 2 0 {name=x10 }
-C {devices/ipin.sym} 30 -130 0 1 {name=p11 lab=LPI}
-C {devices/opin.sym} 30 -90 0 0 {name=p12 lab=LPO}
