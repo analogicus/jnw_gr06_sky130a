@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1743677045
+timestamp 1743679690
 << locali >>
 rect 13954 16234 14146 16500
 rect 17364 16590 21646 16702
@@ -497,7 +497,7 @@ timestamp 1743265964
 transform 1 0 15206 0 1 3008
 box 0 0 2744 3440
 use OTA  OTA_0
-timestamp 1743272310
+timestamp 1743679690
 transform 1 0 0 0 1 480
 box 0 -480 10506 10458
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
