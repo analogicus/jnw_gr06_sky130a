@@ -67,8 +67,8 @@ VB10 b.4 b<10> dc 0
 * PROBE
 *----------------------------------------------------------------
 
-.save v(xdut.OUT) v(xdut.CAP) v(xdut.net2) v(rst)
-.save all
+.save v(xdut.OUT) v(xdut.net2) v(rst) v(OUT)
+
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -94,7 +94,7 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 foreach vtemp -40 -20 0 20 40 60 80 100 120
   option temp=$vtemp
-  tran 1n 10u
+  tran 1n 15u
   write {cicname}_$vtemp$fend
 end
 
