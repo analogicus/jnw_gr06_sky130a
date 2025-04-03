@@ -132,8 +132,14 @@ In the picture below one can see how it is in the simulator. This is a very bad 
 <br />
 <!--- ################################################################################################################# --->
 
+#Layout
+Layout for the top level:
 
+![layout](images/layout.png)
+On the left is the temperature to current circuit. In the middle/right one can see the capasitor that is being charged. and on the right is the OTA comparator that creates the outputsignal. VDD is on metal1(orange) and VSS is on locali(Blue).
 
+A 3d picture of the layout:
+![layout](images/layout_3d.JPG)
 
 
 
