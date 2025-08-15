@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1754770625
+timestamp 1754836895
 << locali >>
 rect 17256 11684 30986 13304
 rect 21942 11590 30986 11684
@@ -102,11 +102,11 @@ timestamp 1754770625
 transform 1 0 19348 0 1 13262
 box 0 0 1880 3440
 use OTA  OTA_0
-timestamp 1754770625
+timestamp 1754836895
 transform 1 0 20470 0 1 -228
 box 0 -480 10506 10458
 use temp_affected_current  temp_affected_current_0
-timestamp 1754770625
+timestamp 1754836895
 transform 1 0 0 0 1 0
 box 0 -2258 23688 17114
 << labels >>
