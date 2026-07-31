@@ -17,6 +17,8 @@ Renate Klemetsdal
 # What
 We are making a temperature sensor.
 
+Some measurements at https://analogicus.com/jnw-tt-2025/presentation.html and https://github.com/wulffern/jnw-tt-2025/tree/main/meas
+
 ## Specs
 
 | What            |        Cell/Name |
